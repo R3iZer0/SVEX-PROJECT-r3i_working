@@ -1,0 +1,15 @@
+{% extends 'SVEX_APP/base_client.html' %}
+    
+{% block content %}
+  <h2>KYC Status</h2>
+  {% if kyc %}
+    <p>Status: {{ kyc.get_verification_status_display }}</p>
+    {% if kyc.is_verified %}
+      <p>Your KYC has been verified.</p>
+    {% else %}
+      <p>Your KYC is pending verification.</p>
+    {% endif %}
+  {% else %}
+    <p>No KYC submission found for this user.</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,40 @@
+<!-- edit_client_manager.html -->
+
+{% extends 'SVEX_APP/base_manager.html' %}
+{% block title %}Edit Clients{% endblock %}
+
+{% block content %}
+
+
+<h1>Edit Client</h1>
+<form method="post" action="{% url 'edit_client' client.pk %}">
+    {% csrf_token %}
+    <label for="client_number">Client Number:</label>
+    {{ form.client_number }}<br>
+
+    <label for="first_name">First Name:</label>
+    {{ form.first_name }}<br>
+
+    <label for="last_name">Last Name:</label>
+    {{ form.last_name }}<br>
+
+    <label for="birthdate">Birthdate:</label>
+    {{ form.birthdate }}<br>
+
+    <label for="client_credits">Client Credits:</label>
+    {{ form.client_credits }}<br>
+
+    <label for="phone">Phone:</label>
+    {{ form.phone }}<br>
+
+    <label for="address">Address:</label>
+    {{ form.address }}<br>
+
+    <label for="zip_code">Zip Code:</label>
+    {{ form.zip_code }}<br>
+
+    <button type="submit">Save Changes</button>
+</form>
+
+
+{% endblock %}

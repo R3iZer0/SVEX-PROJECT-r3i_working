@@ -1,0 +1,569 @@
+{% extends 'SVEX_APP/dashboard/layout.html' %}
+{% block content %}
+<div data-v-6c6b593e="" class="body">
+    <div data-v-3548214f="" data-v-8be4603a="" data-v-6f92ef35="" data-v-6c6b593e=""
+         class="page dashboard">
+        <div data-v-b8f82250="" data-v-3548214f="" class="loading" style="display: none;">
+            <div data-v-b8f82250="" class="img" style="text-align: center;"><img data-v-b8f82250=""
+                                                                                 src="/favicon_default.ico"
+                                                                                 alt=""
+                                                                                 style="margin-bottom: 15px; width: 64px; height: 64px;"><br
+                    data-v-b8f82250=""><span data-v-3548214f="" data-v-b8f82250=""
+                                             style="display: none;">Data loading error. Reload the page or try again later.</span>
+            </div>
+        </div>
+        <div data-v-3548214f="" class="" style="">
+            <div data-v-3548214f="" class="page-header" style="display: none;"><h1
+                    data-v-3548214f=""></h1></div>
+            <div data-v-4a6dcd5a="" data-v-8be4603a="" class="page-container"
+                 style="border-bottom: medium;" data-v-3548214f="">
+                <div data-v-8be4603a="" data-v-4a6dcd5a="" class="container"><h2 data-v-8be4603a=""
+                                                                                 data-v-4a6dcd5a="">
+                    Locked Staking</h2>
+                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="staking-table">
+                        <div data-v-8be4603a="" data-v-4a6dcd5a="" class="header">
+                            <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td">Token</div>
+                            <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td">Est. APY</div>
+                            <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td">Minimum Locked
+                                Amount
+                            </div>
+                            <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td"></div>
+                        </div>
+                        <div data-v-8be4603a="" data-v-4a6dcd5a="" class="body">
+                            <div data-v-8be4603a="" data-v-4a6dcd5a="" id="plan_0" class="tr">
+                                <div data-v-8be4603a="" data-v-4a6dcd5a="" class="preview">
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="align-items: center; display: flex; width: 16px; height: 16px;">
+                                            <img data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                 src="/currencies/BTC.png" alt=""
+                                                 style="margin-right: 5px; width: 100%; height: 100%;">
+                                            BTC
+                                        </div>
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td"
+                                         style="color: rgb(14, 203, 129);">30.00%
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td">0.01 BTC
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td"
+                                         style="text-align: right;">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a="" class="chevron">
+                                            <svg data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                 class="svg-inline--fa fa-chevron-down fa-w-14"
+                                                 aria-hidden="true" focusable="false"
+                                                 data-prefix="fas" data-icon="chevron-down"
+                                                 role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 448 512" data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                      d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+                                            </svg>
+                                            <!-- <i data-v-8be4603a="" data-v-4a6dcd5a="" class="fas fa-chevron-down"></i> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-v-8be4603a="" data-v-4a6dcd5a="" class="information">
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="data">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="margin-right: 25px;"><span data-v-8be4603a=""
+                                                                               data-v-4a6dcd5a=""
+                                                                               style="cursor: pointer;">Available balance: 0.000000 BTC</span>
+                                            <div data-v-72d3b7be="" data-v-8be4603a="" class="Input"
+                                                 data-v-4a6dcd5a=""><label data-v-72d3b7be=""
+                                                                           for="zqlubb">Amount
+                                                BTC</label><input data-v-72d3b7be="" type="number"
+                                                                  id="zqlubb"><span
+                                                    data-v-72d3b7be="" style="display: none;">Incorrect value</span>
+                                            </div>
+                                        </div>
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Year: 0.000000 BTC</span><br
+                                                data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Month: 0.000000 BTC</span><br
+                                                data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Day: 0.000000 BTC</span>
+                                        </div>
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="margin-left: auto;">
+                                            <button data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                    class="stake-btn">Stake Now
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-8be4603a="" data-v-4a6dcd5a="" id="plan_1" class="tr">
+                                <div data-v-8be4603a="" data-v-4a6dcd5a="" class="preview">
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="align-items: center; display: flex; width: 16px; height: 16px;">
+                                            <img data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                 src="/currencies/USDT.png" alt=""
+                                                 style="margin-right: 5px; width: 100%; height: 100%;">
+                                            USDT
+                                        </div>
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td"
+                                         style="color: rgb(14, 203, 129);">30.00%
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td">500 USDT
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td"
+                                         style="text-align: right;">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a="" class="chevron">
+                                            <svg data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                 class="svg-inline--fa fa-chevron-down fa-w-14"
+                                                 aria-hidden="true" focusable="false"
+                                                 data-prefix="fas" data-icon="chevron-down"
+                                                 role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 448 512" data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                      d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+                                            </svg>
+                                            <!-- <i data-v-8be4603a="" data-v-4a6dcd5a="" class="fas fa-chevron-down"></i> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-v-8be4603a="" data-v-4a6dcd5a="" class="information">
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="data">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="margin-right: 25px;"><span data-v-8be4603a=""
+                                                                               data-v-4a6dcd5a=""
+                                                                               style="cursor: pointer;">Available balance: 0.000000 USDT</span>
+                                            <div data-v-72d3b7be="" data-v-8be4603a="" class="Input"
+                                                 data-v-4a6dcd5a=""><label data-v-72d3b7be=""
+                                                                           for="ct5hoh">Amount
+                                                USDT</label><input data-v-72d3b7be="" type="number"
+                                                                   id="ct5hoh"><span
+                                                    data-v-72d3b7be="" style="display: none;">Incorrect value</span>
+                                            </div>
+                                        </div>
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Year: 0.000000 USDT</span><br
+                                                data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Month: 0.000000 USDT</span><br
+                                                data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Day: 0.000000 USDT</span>
+                                        </div>
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="margin-left: auto;">
+                                            <button data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                    class="stake-btn">Stake Now
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-8be4603a="" data-v-4a6dcd5a="" id="plan_2" class="tr">
+                                <div data-v-8be4603a="" data-v-4a6dcd5a="" class="preview">
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="align-items: center; display: flex; width: 16px; height: 16px;">
+                                            <img data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                 src="/currencies/BNB.png" alt=""
+                                                 style="margin-right: 5px; width: 100%; height: 100%;">
+                                            BNB
+                                        </div>
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td"
+                                         style="color: rgb(14, 203, 129);">30.00%
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td">20 BNB
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td"
+                                         style="text-align: right;">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a="" class="chevron">
+                                            <svg data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                 class="svg-inline--fa fa-chevron-down fa-w-14"
+                                                 aria-hidden="true" focusable="false"
+                                                 data-prefix="fas" data-icon="chevron-down"
+                                                 role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 448 512" data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                      d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+                                            </svg>
+                                            <!-- <i data-v-8be4603a="" data-v-4a6dcd5a="" class="fas fa-chevron-down"></i> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-v-8be4603a="" data-v-4a6dcd5a="" class="information">
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="data">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="margin-right: 25px;"><span data-v-8be4603a=""
+                                                                               data-v-4a6dcd5a=""
+                                                                               style="cursor: pointer;">Available balance: 0.000000 BNB</span>
+                                            <div data-v-72d3b7be="" data-v-8be4603a="" class="Input"
+                                                 data-v-4a6dcd5a=""><label data-v-72d3b7be=""
+                                                                           for="gcwyc3">Amount
+                                                BNB</label><input data-v-72d3b7be="" type="number"
+                                                                  id="gcwyc3"><span
+                                                    data-v-72d3b7be="" style="display: none;">Incorrect value</span>
+                                            </div>
+                                        </div>
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Year: 0.000000 BNB</span><br
+                                                data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Month: 0.000000 BNB</span><br
+                                                data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Day: 0.000000 BNB</span>
+                                        </div>
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="margin-left: auto;">
+                                            <button data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                    class="stake-btn">Stake Now
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-8be4603a="" data-v-4a6dcd5a="" id="plan_3" class="tr">
+                                <div data-v-8be4603a="" data-v-4a6dcd5a="" class="preview">
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="align-items: center; display: flex; width: 16px; height: 16px;">
+                                            <img data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                 src="/currencies/SOL.png" alt=""
+                                                 style="margin-right: 5px; width: 100%; height: 100%;">
+                                            SOL
+                                        </div>
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td"
+                                         style="color: rgb(14, 203, 129);">30.00%
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td">5 SOL
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td"
+                                         style="text-align: right;">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a="" class="chevron">
+                                            <svg data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                 class="svg-inline--fa fa-chevron-down fa-w-14"
+                                                 aria-hidden="true" focusable="false"
+                                                 data-prefix="fas" data-icon="chevron-down"
+                                                 role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 448 512" data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                      d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+                                            </svg>
+                                            <!-- <i data-v-8be4603a="" data-v-4a6dcd5a="" class="fas fa-chevron-down"></i> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-v-8be4603a="" data-v-4a6dcd5a="" class="information">
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="data">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="margin-right: 25px;"><span data-v-8be4603a=""
+                                                                               data-v-4a6dcd5a=""
+                                                                               style="cursor: pointer;">Available balance: 0.000000 SOL</span>
+                                            <div data-v-72d3b7be="" data-v-8be4603a="" class="Input"
+                                                 data-v-4a6dcd5a=""><label data-v-72d3b7be=""
+                                                                           for="3oae1p">Amount
+                                                SOL</label><input data-v-72d3b7be="" type="number"
+                                                                  id="3oae1p"><span
+                                                    data-v-72d3b7be="" style="display: none;">Incorrect value</span>
+                                            </div>
+                                        </div>
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Year: 0.000000 SOL</span><br
+                                                data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Month: 0.000000 SOL</span><br
+                                                data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Day: 0.000000 SOL</span>
+                                        </div>
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="margin-left: auto;">
+                                            <button data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                    class="stake-btn">Stake Now
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-8be4603a="" data-v-4a6dcd5a="" id="plan_4" class="tr">
+                                <div data-v-8be4603a="" data-v-4a6dcd5a="" class="preview">
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="align-items: center; display: flex; width: 16px; height: 16px;">
+                                            <img data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                 src="/currencies/ETC.png" alt=""
+                                                 style="margin-right: 5px; width: 100%; height: 100%;">
+                                            ETC
+                                        </div>
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td"
+                                         style="color: rgb(14, 203, 129);">30.00%
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td">10 ETC
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td"
+                                         style="text-align: right;">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a="" class="chevron">
+                                            <svg data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                 class="svg-inline--fa fa-chevron-down fa-w-14"
+                                                 aria-hidden="true" focusable="false"
+                                                 data-prefix="fas" data-icon="chevron-down"
+                                                 role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 448 512" data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                      d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+                                            </svg>
+                                            <!-- <i data-v-8be4603a="" data-v-4a6dcd5a="" class="fas fa-chevron-down"></i> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-v-8be4603a="" data-v-4a6dcd5a="" class="information">
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="data">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="margin-right: 25px;"><span data-v-8be4603a=""
+                                                                               data-v-4a6dcd5a=""
+                                                                               style="cursor: pointer;">Available balance: 0.000000 ETC</span>
+                                            <div data-v-72d3b7be="" data-v-8be4603a="" class="Input"
+                                                 data-v-4a6dcd5a=""><label data-v-72d3b7be=""
+                                                                           for="oz1eh7">Amount
+                                                ETC</label><input data-v-72d3b7be="" type="number"
+                                                                  id="oz1eh7"><span
+                                                    data-v-72d3b7be="" style="display: none;">Incorrect value</span>
+                                            </div>
+                                        </div>
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Year: 0.000000 ETC</span><br
+                                                data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Month: 0.000000 ETC</span><br
+                                                data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Day: 0.000000 ETC</span>
+                                        </div>
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="margin-left: auto;">
+                                            <button data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                    class="stake-btn">Stake Now
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-8be4603a="" data-v-4a6dcd5a="" id="plan_5" class="tr">
+                                <div data-v-8be4603a="" data-v-4a6dcd5a="" class="preview">
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="align-items: center; display: flex; width: 16px; height: 16px;">
+                                            <img data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                 src="/currencies/ADA.png" alt=""
+                                                 style="margin-right: 5px; width: 100%; height: 100%;">
+                                            ADA
+                                        </div>
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td"
+                                         style="color: rgb(14, 203, 129);">30.00%
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td">500 ADA
+                                    </div>
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="td"
+                                         style="text-align: right;">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a="" class="chevron">
+                                            <svg data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                 class="svg-inline--fa fa-chevron-down fa-w-14"
+                                                 aria-hidden="true" focusable="false"
+                                                 data-prefix="fas" data-icon="chevron-down"
+                                                 role="img" xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 448 512" data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                      d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+                                            </svg>
+                                            <!-- <i data-v-8be4603a="" data-v-4a6dcd5a="" class="fas fa-chevron-down"></i> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-v-8be4603a="" data-v-4a6dcd5a="" class="information">
+                                    <div data-v-8be4603a="" data-v-4a6dcd5a="" class="data">
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="margin-right: 25px;"><span data-v-8be4603a=""
+                                                                               data-v-4a6dcd5a=""
+                                                                               style="cursor: pointer;">Available balance: 0.000000 ADA</span>
+                                            <div data-v-72d3b7be="" data-v-8be4603a="" class="Input"
+                                                 data-v-4a6dcd5a=""><label data-v-72d3b7be=""
+                                                                           for="2r7uwr">Amount
+                                                ADA</label><input data-v-72d3b7be="" type="number"
+                                                                  id="2r7uwr"><span
+                                                    data-v-72d3b7be="" style="display: none;">Incorrect value</span>
+                                            </div>
+                                        </div>
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Year: 0.000000 ADA</span><br
+                                                data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Month: 0.000000 ADA</span><br
+                                                data-v-8be4603a="" data-v-4a6dcd5a=""><span
+                                                data-v-8be4603a="" data-v-4a6dcd5a="">Per Day: 0.000000 ADA</span>
+                                        </div>
+                                        <div data-v-8be4603a="" data-v-4a6dcd5a=""
+                                             style="margin-left: auto;">
+                                            <button data-v-8be4603a="" data-v-4a6dcd5a=""
+                                                    class="stake-btn">Stake Now
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-v-8be4603a="" data-v-4a6dcd5a="" class="container"><h2 data-v-8be4603a=""
+                                                                                 data-v-4a6dcd5a="">
+                    My staking</h2>
+                    <div data-v-62f45cc0="" data-v-8be4603a="" class="" data-v-4a6dcd5a="">
+                        <div data-v-62f45cc0="" style="position: relative;">
+                            <div data-v-62f45cc0="" style="margin-bottom: 15px;">
+                                <div data-v-62f45cc0="" class="toggle_filters"
+                                     style="display: none;"><span data-v-62f45cc0=""
+                                                                  style="margin-right: 5px;">Clear sort</span>
+                                    <svg data-v-62f45cc0="" aria-hidden="true" focusable="false"
+                                         data-prefix="fal" data-icon="times" role="img"
+                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
+                                         class="svg-inline--fa fa-times fa-w-10 fa-sm">
+                                        <path data-v-62f45cc0="" fill="currentColor"
+                                              d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                                              class=""></path>
+                                    </svg>
+                                </div>
+                                <div data-v-62f45cc0=""
+                                     style="position: relative; display: flex; align-items: center; justify-content: space-between;">
+                                    <div data-v-62f45cc0=""><select data-v-62f45cc0=""
+                                                                    class="mr-auto"
+                                                                    style="width: auto !important; border-radius: 50px; padding: 3px 6px; font-size: 12px; outline: none; border: 1px solid rgb(240, 240, 240);">
+                                        <option data-v-62f45cc0="" value="10">10</option>
+                                        <option data-v-62f45cc0="" value="25">25</option>
+                                        <option data-v-62f45cc0="" value="50">50</option>
+                                    </select></div>
+                                    <div data-v-62f45cc0="" style="position: relative;">
+                                        <div data-v-62f45cc0="" class="search-input"><input
+                                                data-v-62f45cc0="" type="text"
+                                                placeholder="Search by currency...">
+                                            <div data-v-62f45cc0="" class="placeholder">
+                                                <svg data-v-62f45cc0="" aria-hidden="true"
+                                                     focusable="false" data-prefix="fal"
+                                                     data-icon="search" role="img"
+                                                     xmlns="http://www.w3.org/2000/svg"
+                                                     viewBox="0 0 512 512"
+                                                     class="svg-inline--fa fa-search fa-w-16">
+                                                    <path data-v-62f45cc0="" fill="currentColor"
+                                                          d="M508.5 481.6l-129-129c-2.3-2.3-5.3-3.5-8.5-3.5h-10.3C395 312 416 262.5 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c54.5 0 104-21 141.1-55.2V371c0 3.2 1.3 6.2 3.5 8.5l129 129c4.7 4.7 12.3 4.7 17 0l9.9-9.9c4.7-4.7 4.7-12.3 0-17zM208 384c-97.3 0-176-78.7-176-176S110.7 32 208 32s176 78.7 176 176-78.7 176-176 176z"
+                                                          class=""></path>
+                                                </svg>
+                                            </div>
+                                            <svg data-v-62f45cc0="" aria-hidden="true"
+                                                 focusable="false" data-prefix="fal"
+                                                 data-icon="times" role="img"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 320 512"
+                                                 class="clear_search svg-inline--fa fa-times fa-w-10"
+                                                 style="display: none;">
+                                                <path data-v-62f45cc0="" fill="currentColor"
+                                                      d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                                                      class=""></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-v-62f45cc0="">
+                            <div data-v-62f45cc0="" class="table_div empty"
+                                 style="overflow-x: auto;">
+                                <div data-v-62f45cc0="" class="empty"
+                                     style="height: 117.5px; display: none;">Data loading...
+                                </div>
+                                <div data-v-62f45cc0="" class="empty"
+                                     style="height: 117.5px; display: none;">Data loading error.
+                                    Page reload is required.
+                                </div>
+                                <div data-v-62f45cc0="" class="empty" style="height: 117.5px;">No
+                                    data
+                                </div>
+                                <table data-v-62f45cc0="" class="table" style="display: none;">
+                                    <thead data-v-62f45cc0="">
+                                    <tr data-v-62f45cc0="">
+                                        <th data-v-62f45cc0="" class="animated">Currency
+                                            <svg data-v-62f45cc0="" aria-hidden="true"
+                                                 focusable="false" data-prefix="fas"
+                                                 data-icon="sort-up" role="img"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 320 512"
+                                                 class="arrow svg-inline--fa fa-sort-up fa-w-10 up"
+                                                 style="display: none;">
+                                                <path data-v-62f45cc0="" fill="currentColor"
+                                                      d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                      class=""></path>
+                                            </svg>
+                                        </th>
+                                        <th data-v-62f45cc0="" class="animated">Locked Amount
+                                            <svg data-v-62f45cc0="" aria-hidden="true"
+                                                 focusable="false" data-prefix="fas"
+                                                 data-icon="sort-up" role="img"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 320 512"
+                                                 class="arrow svg-inline--fa fa-sort-up fa-w-10 up"
+                                                 style="display: none;">
+                                                <path data-v-62f45cc0="" fill="currentColor"
+                                                      d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                      class=""></path>
+                                            </svg>
+                                        </th>
+                                        <th data-v-62f45cc0="" class="animated">Earned
+                                            <svg data-v-62f45cc0="" aria-hidden="true"
+                                                 focusable="false" data-prefix="fas"
+                                                 data-icon="sort-up" role="img"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 320 512"
+                                                 class="arrow svg-inline--fa fa-sort-up fa-w-10 up"
+                                                 style="display: none;">
+                                                <path data-v-62f45cc0="" fill="currentColor"
+                                                      d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                      class=""></path>
+                                            </svg>
+                                        </th>
+                                        <th data-v-62f45cc0="" class="animated">Date
+                                            <svg data-v-62f45cc0="" aria-hidden="true"
+                                                 focusable="false" data-prefix="fas"
+                                                 data-icon="sort-up" role="img"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 320 512"
+                                                 class="arrow svg-inline--fa fa-sort-up fa-w-10 up">
+                                                <path data-v-62f45cc0="" fill="currentColor"
+                                                      d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                      class=""></path>
+                                            </svg>
+                                        </th>
+                                        <th data-v-62f45cc0="" class="">
+                                            <svg data-v-62f45cc0="" aria-hidden="true"
+                                                 focusable="false" data-prefix="fas"
+                                                 data-icon="sort-up" role="img"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 viewBox="0 0 320 512"
+                                                 class="arrow svg-inline--fa fa-sort-up fa-w-10 up"
+                                                 style="display: none;">
+                                                <path data-v-62f45cc0="" fill="currentColor"
+                                                      d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                      class=""></path>
+                                            </svg>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody data-v-62f45cc0=""></tbody>
+                                </table>
+                            </div>
+                            <div data-v-62f45cc0=""
+                                 style="margin-top: 10px; display: none; justify-content: space-between; align-items: center;">
+                                                    <span data-v-62f45cc0=""
+                                                          style="color: rgb(117, 125, 145); font-size: 11.3833px;">Showing 1 to 0 of 0 entries</span>
+                                <ul data-v-62f45cc0="" class="pagination justify-content-end">
+                                    <button data-v-62f45cc0="" class="page-item disabled"> ❮
+                                    </button>
+                                    <button data-v-62f45cc0="" class="page-item"> ❯</button>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

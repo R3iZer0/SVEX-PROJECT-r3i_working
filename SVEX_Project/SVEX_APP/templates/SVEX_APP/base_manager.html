@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Manager Page{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base_manager.css' %}">
+    <style>
+       body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
+        margin: 0;
+    }
+
+    header, nav, main, footer {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+    }
+
+    nav {
+        background-color: #444;
+        color: #fff;
+    }
+
+    footer {
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        margin-top: auto; /* Push the footer to the bottom of the page */
+    }
+
+    .active {
+        background-color: #666; /* Change the background color of the active tab */
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome, {{user.username}}!</h1>
+    </header>
+    <nav class="manager-nav">
+        <ul>
+            <li><a href="{% url 'manager_home' %}">Home Page</a></li>
+            <li><a href="{% url 'client_list' %}">Clients</a></li>
+            <li><a href="{% url 'register' %}">Register Users</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Tickets</a>
+                <div class="dropdown-content">
+                    <a href="{% url 'all_tickets'%} ">All Tickets</a>
+                    <a href="{% url 'open_tickets' %}">Open Tickets</a>
+                    <a href="{% url 'tickets_in_progress' %}">Tickets in Progres</a>
+                    <a href="{% url 'closed_tickets'%}">Closed Tickets</a>
+                </div>
+            </li>
+            <li><a href="{% url 'view_kyc' %}">KYC</a></li>
+            <li><a href="{% url 'view_client_wallet' %}">Client Wallets</a></li>
+            <li><a href="{% url 'edit_website' %}">Update Website</a></li>
+            <li><a href="{% url 'my_profile_manager'%}">My Profile</a></li>
+            <li><a href="{% url 'custom_logout' %}">Log out</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 SVEX_Project. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var currentUrl = "{{ request.path }}";
+            var navLinks = document.querySelectorAll(".manager-nav a");
+
+            navLinks.forEach(function(link) {
+                if (link.getAttribute("href") === currentUrl) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

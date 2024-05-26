@@ -1,0 +1,127 @@
+{% extends 'SVEX_APP/base_manager.html' %}
+
+{% block title %}Manager Home{% endblock %}
+
+{% block content %}
+<style>
+.manager-dashboard {
+    padding: 20px;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.dashboard-item:hover {
+    transform: translateY(-5px); /* Adjust the amount of floating */
+}
+
+.client-statistics, .kyc-statistics, .client-wallet-statistics, .case-statistics, .website-information {
+    /* Additional styles for each quadrant */
+}
+
+.client-statistics {
+    background-color: #ffe0e0;
+}
+
+.kyc-statistics {
+    background-color: #e0e0ff;
+}
+
+.client-wallet-statistics {
+    background-color: #e0ffe0;
+}
+
+.case-statistics {
+    background-color: #ffffcc;
+}
+
+.website-information {
+    background-color: #e6e6e6;
+}
+
+.dashboard-item h2 {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center; /* Center align headers */
+    margin-bottom: 10px;
+}
+
+.dashboard-item div {
+    margin-bottom: 8px;
+}
+</style>
+<body>
+    <div class="manager-dashboard">
+        <h1>Manager Dashboard</h1>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-item client-statistics">
+                <h2>Client Statistics</h2>
+                <div><strong>Total Clients:</strong> {{ total_clients }}</div>
+                <div><strong>Active Clients:</strong> {{ active_clients_count }}</div>
+                <div><strong>Phone Provided Percentage:</strong> {{ phone_provided_percentage }}%</div>
+                <div><strong>Address Provided Percentage:</strong> {{ address_provided_percentage }}%</div>
+                <div><strong>Average Credits:</strong> {{ credits_summary.average_credits }}</div>
+                <div><strong>Max Credits:</strong> {{ credits_summary.max_credits }}</div>
+                <div><strong>Min Credits:</strong> {{ credits_summary.min_credits }}</div>
+                <div><strong>Overdue Clients:</strong> {{ overdue_clients_count }}</div>
+            </div>
+
+            <div class="dashboard-item kyc-statistics">
+                <h2>KYC Statistics</h2>
+                <div><strong>Total KYC Pending:</strong> {{ total_kyc_pending }}</div>
+                <div><strong>Total KYC Confirmed:</strong> {{ total_kyc_confirmed }}</div>
+                <div><strong>Total KYC Cancelled:</strong> {{ total_kyc_cancelled }}</div>
+                <div><strong>Percentage Clients with KYC:</strong> {{ percentage_clients_with_kyc }}%</div>
+            </div>
+
+            <div class="dashboard-item client-wallet-statistics">
+                <h2>ClientWallet Statistics</h2>
+                <div><strong>Total Wallets:</strong> {{ total_wallets }}</div>
+                <div><strong>Total SpotBTC Balance:</strong> {{ total_spotbtc_balance }}</div>
+                <div><strong>Total BTC Balance:</strong> {{ total_btc_balance }}</div>
+                <div><strong>Total ETH Balance:</strong> {{ total_eth_balance }}</div>
+                <div><strong>Total USDT Balance ERC20:</strong> {{ total_usdt_balance_erc20 }}</div>
+                <div><strong>Total USD Balance TRC20:</strong> {{ total_usd_balance_trc20 }}</div>
+            </div>
+
+            <div class="dashboard-item case-statistics">
+                <h2>Case Statistics</h2>
+                <div><strong>Total Cases:</strong> {{ total_cases }}</div>
+                <div><strong>Total Open Cases:</strong> {{ total_open_cases }}</div>
+                <div><strong>Total In Progress Cases:</strong> {{ total_in_progress_cases }}</div>
+                <div><strong>Total Resolved Cases:</strong> {{ total_resolved_cases }}</div>
+                <div><strong>Total Pending Cases:</strong> {{ total_pending_cases }}</div>
+            </div>
+
+            <div class="dashboard-item website-information">
+                <h2>Website Information</h2>
+                <div><strong>Website Name:</strong> {{ website_info.name }}</div>
+                <div><strong>Support Email:</strong> {{ website_info.support_email }}</div>
+                <div><strong>Description:</strong> {{ website_info.description }}</div>
+                <div><strong>Address:</strong> {{ website_info.address }}</div>
+                <div><strong>Phone:</strong> {{ website_info.phone }}</div>
+                <div><strong>About Us:</strong> {{ website_info.about_us }}</div>
+                <div><strong>Telegram:</strong> {{ website_info.telegram }}</div>
+                <div><strong>WhatsApp:</strong> {{ website_info.whatsapp }}</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}

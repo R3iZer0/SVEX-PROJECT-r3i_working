@@ -1,0 +1,710 @@
+{% extends 'SVEX_APP/wallets/layout.html' %}
+{% block content %}
+<div data-v-3660d761="" class="body">
+    <div data-v-3548214f="" data-v-5c8491a6="" data-v-624acb02="" data-v-6f92ef35="" data-v-3660d761="" class="page">
+        <div data-v-b8f82250="" data-v-3548214f="" class="loading" style="display: none;">
+            <div data-v-b8f82250="" class="img" style="text-align: center;"><img data-v-b8f82250=""
+                                                                                 src="/favicon_default.ico"
+                                                                                 alt=""
+                                                                                 style="margin-bottom: 15px; width: 64px; height: 64px;"><br
+                    data-v-b8f82250=""><span data-v-3548214f="" data-v-b8f82250=""
+                                             style="display: none;">Data loading error. Reload the page or try again later.</span>
+            </div>
+        </div>
+        <div data-v-3548214f="" class="" style="">
+            <div data-v-3548214f="" class="page-header"><h1 data-v-3548214f="">Withdraw</h1></div>
+            <div data-v-4a6dcd5a="" data-v-5c8491a6="" class="page-container" data-v-3548214f=""
+                 style="border-bottom: none;">
+                <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="container"
+                     style="margin-bottom: 40px;">
+                    <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="col-lg-6 col-md-12 col-xs-12"
+                         style="float: right;">
+                        <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="section"
+                             style="border: none; padding: 0px !important; margin-bottom: 20px;">
+                            <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="head"><h3
+                                    data-v-5c8491a6="" data-v-4a6dcd5a="" class="title"
+                                    style="font-size: 16px;">Withdraw Limit</h3>
+                                <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="new-btn-empty"><a
+                                        data-v-5c8491a6=""
+                                        href="/en/dashboard/settings/verification" class=""
+                                        data-v-4a6dcd5a=""> Increase </a></div>
+                            </div>
+                            <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="wrapper"
+                                 style="display: flex; align-items: end;">
+                                <div data-v-5c8491a6="" data-v-4a6dcd5a=""
+                                     style="display: flex; align-items: center;"><img
+                                        data-v-5c8491a6="" data-v-4a6dcd5a="" width="24px"
+                                        src="/static/images/currencies/BTC.png" alt=""
+                                        style="margin-right: 15px;"><span data-v-5c8491a6=""
+                                                                          data-v-4a6dcd5a=""
+                                                                          class="value"> 1.00000000 <b
+                                        data-v-5c8491a6="" data-v-4a6dcd5a=""
+                                        style="font-size: 14px; color: rgba(10, 15, 56, 0.7);">BTC</b></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="col-lg-12 col-md-12 col-xs-12"
+                         style="margin-bottom: 15px;">
+                        <div data-v-5c8491a6="" data-v-4a6dcd5a="" style="margin-bottom: 35px;">
+                            <div data-v-e7465916="" data-v-5c8491a6="" class="input-drop"
+                                 data-v-4a6dcd5a="">
+                                <div data-v-e7465916="" class="head"><img data-v-e7465916=""
+                                                                          src="/static/images/currencies/BTC.png"
+                                                                          alt="" class="coin-img">
+                                    <div data-v-e7465916="" class="coin-info">
+                                        <div data-v-e7465916="" class="label"><span
+                                                data-v-e7465916="" class="code">BTC</span><span
+                                                data-v-e7465916="" class="name">Bitcoin</span></div>
+                                        <p data-v-e7465916="">0.00000000 <span data-v-e7465916=""
+                                                                               style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                        </p></div>
+                                    <div data-v-e7465916="" class="arrow">
+                                        <svg data-v-e7465916="" width="24" height="25"
+                                             viewBox="0 0 24 25" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path data-v-e7465916="" fill-rule="evenodd"
+                                                  clip-rule="evenodd"
+                                                  d="M10.4815 2.614C10.9795 2.538 11.4905 2.5 12.0005 2.5C17.5145 2.5 22.0005 6.986 22.0005 12.5C22.0005 18.014 17.5145 22.5 12.0005 22.5C6.48649 22.5 2.00049 18.014 2.00049 12.5C2.00049 9.372 3.42349 6.483 5.90249 4.573C6.22049 4.328 6.67849 4.388 6.92249 4.705C7.16849 5.023 7.10749 5.479 6.79049 5.726C4.66949 7.357 3.45449 9.827 3.45449 12.5C3.45449 17.212 7.28749 21.046 12.0005 21.046C16.7125 21.046 20.5455 17.212 20.5455 12.5C20.5455 7.788 16.7125 3.954 12.0005 3.954C11.5635 3.954 11.1265 3.987 10.7015 4.052C10.3055 4.112 9.93449 3.84 9.87349 3.443C9.80749 3.044 10.0845 2.675 10.4815 2.614ZM11.9997 15.2942C11.8007 15.2942 11.6097 15.2152 11.4687 15.0732L7.99769 11.5872C7.70469 11.2932 7.70569 10.8182 7.99969 10.5262C8.29369 10.2342 8.76769 10.2342 9.05969 10.5282L11.9997 13.4812L14.9397 10.5282C15.2317 10.2342 15.7067 10.2342 16.0007 10.5262C16.2937 10.8182 16.2947 11.2932 16.0027 11.5872L12.5307 15.0732C12.3907 15.2152 12.1997 15.2942 11.9997 15.2942Z"
+                                                  fill="#808191"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div data-v-e7465916="" class="body" style="display: none;">
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/BTC.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">BTC</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/PLS.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">PLS</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/WBTC.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">WBTC</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/ETH.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">ETH</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/BCH.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">BCH</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/USDT.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">USDT</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/BNB.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">BNB</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/SOL.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">SOL</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/XRP.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">XRP</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/LTC.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">LTC</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/ADA.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">ADA</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/LUNA.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">LUNA</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/AVAX.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">AVAX</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/DOGE.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">DOGE</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/DOT.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">DOT</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/BUSD.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">BUSD</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/SHIB.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">SHIB</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/MATIC.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916=""
+                                                    class="code">MATIC</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/NEAR.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">NEAR</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/ATOM.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">ATOM</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/LINK.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">LINK</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/UNI.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">UNI</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/TRX.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">TRX</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/ETC.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">ETC</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/ALGO.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">ALGO</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/XLM.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">XLM</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/XMR.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">XMR</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/VET.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">VET</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/MANA.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">MANA</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/HBAR.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">HBAR</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/FIL.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">FIL</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/ICP.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">ICP</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/EGLD.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">EGLD</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/THETA.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916=""
+                                                    class="code">THETA</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/SAND.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">SAND</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/FTM.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">FTM</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/APE.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">APE</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/AXS.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">AXS</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/RUNE.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">RUNE</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/XTZ.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">XTZ</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/WAVES.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916=""
+                                                    class="code">WAVES</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/CAKE.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">CAKE</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/EOS.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">EOS</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/ZEC.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">ZEC</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                    <div data-v-e7465916="" class="head item-coin"><img
+                                            data-v-e7465916="" src="/currencies/FLOW.png" alt=""
+                                            class="coin-img">
+                                        <div data-v-e7465916="" class="coin-info">
+                                            <div data-v-e7465916="" class="label"><span
+                                                    data-v-e7465916="" class="code">FLOW</span><span
+                                                    data-v-e7465916="" class="name"></span></div>
+                                            <p data-v-e7465916="">0.00000000 <span
+                                                    data-v-e7465916=""
+                                                    style="font-weight: 400; color: grey; font-size: 12px;"> ~$0.00 </span>
+                                            </p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="section">
+                            <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="withdraw-type">
+                                <div data-v-5c8491a6="" data-v-4a6dcd5a=""
+                                     class="withdraw-method active"><img data-v-5c8491a6=""
+                                                                         data-v-4a6dcd5a=""
+                                                                         src="/static/images/currencies/crypto.svg"
+                                                                         alt="">
+                                    Crypto
+                                </div>
+                                <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="withdraw-method">
+                                    <img data-v-5c8491a6="" data-v-4a6dcd5a="" src="/static/images/currencies/cards.svg"
+                                         alt=""> Visa / Mastercard
+                                </div>
+                                <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="withdraw-method">
+                                    <img data-v-5c8491a6="" data-v-4a6dcd5a=""
+                                         src="/static/images/currencies/paypal.svg"
+                                         alt=""> PayPal
+                                </div>
+                                <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="withdraw-method">
+                                    <img data-v-5c8491a6="" data-v-4a6dcd5a="" src="/static/images/currencies/swift.svg"
+                                         alt=""> Swift
+                                </div>
+                            </div>
+                            <div data-v-5c8491a6="" data-v-4a6dcd5a="">
+                                <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="prevent"
+                                     style="margin-bottom: 20px;"> Do not withdraw directly to a
+                                    crowdfund or ICO address, as your account will not be credited
+                                    with tokens from such sales.
+                                </div>
+                                <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="network"><label
+                                        data-v-5c8491a6="" data-v-4a6dcd5a="">Network</label>
+                                    <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="networks-row">
+                                        <span data-v-5c8491a6="" data-v-4a6dcd5a="" class="current">BTC</span><span
+                                            data-v-5c8491a6="" data-v-4a6dcd5a=""
+                                            class="">ERC20</span><span data-v-5c8491a6=""
+                                                                       data-v-4a6dcd5a="" class="">BEP20</span>
+                                    </div>
+                                </div>
+                                <div data-v-72d3b7be="" data-v-5c8491a6="" class="Input"
+                                     data-v-4a6dcd5a="" style="margin: 10px 0px 0px;"><label
+                                        data-v-72d3b7be="" for="e1i1ul">Wallet Address</label><input
+                                        data-v-72d3b7be="" type="text" id="e1i1ul"><span
+                                        data-v-72d3b7be=""
+                                        style="display: none;">Incorrect value</span></div>
+                            </div>
+                            <div data-v-5c8491a6="" data-v-4a6dcd5a="" style="position: relative;">
+                                <div data-v-72d3b7be="" data-v-5c8491a6="" class="Input"
+                                     data-v-4a6dcd5a="" style="margin: 10px 0px 0px;"><label
+                                        data-v-72d3b7be="" for="rob1hu">Comment</label><input
+                                        data-v-72d3b7be="" type="text" id="rob1hu"><span
+                                        data-v-72d3b7be=""
+                                        style="display: none;">Incorrect value</span></div>
+                                <div data-v-72d3b7be="" data-v-5c8491a6="" class="Input"
+                                     data-v-4a6dcd5a="" style="margin: 10px 0px 0px;"><label
+                                        data-v-72d3b7be="" for="dm5ff8">Amount in BTC</label><input
+                                        data-v-72d3b7be="" type="number" id="dm5ff8"><span
+                                        data-v-72d3b7be=""
+                                        style="display: none;">Incorrect value</span></div>
+                                <div data-v-5c8491a6="" data-v-4a6dcd5a="" class="max-btn">MAX</div>
+                            </div>
+                            <div data-v-5c8491a6="" data-v-4a6dcd5a=""
+                                 style="position: relative; margin: 10px 0px 0px;">
+                                <div data-v-72d3b7be="" data-v-5c8491a6="" class="Input"
+                                     data-v-4a6dcd5a=""><label data-v-72d3b7be="" for="vzwj85">Receiving
+                                    Amount</label><input data-v-72d3b7be="" type="text" id="vzwj85"
+                                                         disabled="disabled"><span
+                                        data-v-72d3b7be=""
+                                        style="display: none;">Incorrect value</span></div>
+                                <span data-v-5c8491a6="" data-v-4a6dcd5a=""
+                                      style="position: absolute; font-size: 11px; top: 33px; right: 10px; color: rgb(129, 132, 129);"> ~$0.00 </span>
+                            </div>
+                            <button data-v-31aba6a9="" data-v-5c8491a6="" disabled="disabled"
+                                    class="Button default" data-v-4a6dcd5a="" style="width: 100%;">
+                                Withdraw
+                                <svg data-v-31aba6a9="" viewBox="0 0 50 50" class="spinner"
+                                     style="display: none;">
+                                    <circle data-v-31aba6a9="" cx="25" cy="25" r="20" fill="none"
+                                            stroke-width="5" class="path"></circle>
+                                </svg>
+                            </button>
+                            <div data-v-5c8491a6="" data-v-4a6dcd5a=""
+                                 style="margin-top: 20px; font-weight: 500; letter-spacing: 0.01em;">
+                                Fee 0.00012 BTC
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

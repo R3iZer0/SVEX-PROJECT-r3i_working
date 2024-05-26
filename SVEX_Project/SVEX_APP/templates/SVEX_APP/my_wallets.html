@@ -1,0 +1,23 @@
+{% extends 'SVEX_APP/base_client.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Balance</title>
+</head>
+<body>
+    <h1>Wallet Balance</h1>
+
+    <p><strong>BTC Balance:</strong> {{ btc_balance }}</p>
+    <p><strong>Spot BTC Balance:</strong> {{ spotbtc_balance }}</p>
+    <p><strong>Ethereum (ETH) Balance:</strong> {{ eth_balance }}</p>
+    <p><strong>USDT ERC-20 Balance:</strong> {{ usdt_balance_erc20 }}</p>
+    <p><strong>USD TRC-20 Balance:</strong> {{ usd_balance_trc20 }}</p>
+
+    <!-- You can add more balances here if needed -->
+
+</body>
+</html>
+{% endblock %}

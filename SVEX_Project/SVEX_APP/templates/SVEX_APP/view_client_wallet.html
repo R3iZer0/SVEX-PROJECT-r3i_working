@@ -1,0 +1,109 @@
+{% extends 'SVEX_APP/base_manager.html' %}
+{% block title %}Client Wallets{% endblock %}
+
+{% block content %}
+        <style>
+            /* Table styles */
+            table {
+                border-collapse: collapse;
+                width: 80%;
+                margin: auto; /* Center the table */
+            }
+
+            th, td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+
+              /* Search input styles */
+            #searchInput {
+                width: 20%;
+                padding: 10px;
+                margin: 20px 200px;
+                display: block;
+                border: 1px solid #ccc;
+                border-radius: 20px;
+                outline: none;
+                transition: border-color 0.3s;
+            }
+
+            #searchInput:focus {
+                border-color: #007bff;
+            }
+
+            /* Table row hover effect */
+            tbody tr:hover {
+                background-color: #f2f2f2;
+            }
+
+            /* Edit link styles */
+            .edit-link {
+                color: blue;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            /* Edit link hover effect */
+            .edit-link:hover {
+                color: #0056b3;
+            }
+        </style>
+
+    <h1>Client Wallets</h1>
+
+    <!-- Search input field -->
+    <input type="text" id="searchInput" placeholder="Search by client..." onkeyup="searchTable()">
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Client</th>
+                <th>Spot BTC Balance</th>
+                <th>BTC Balance</th>
+                <th>ETH Balance</th>
+                <th>USDT Balance ERC20</th>
+                <th>USD Balance TRC20</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="walletTableBody">
+            {% for wallet in client_wallets %}
+                <tr>
+                    <td>{{ wallet.client.username }}</td>
+                    <td>{{ wallet.spotbtc_balance }}</td>
+                    <td>{{ wallet.btc_balance }}</td>
+                    <td>{{ wallet.eth_balance }}</td>
+                    <td>{{ wallet.usdt_balance_erc20 }}</td>
+                    <td>{{ wallet.usd_balance_trc20 }}</td>
+                    <td><a href="{% url 'edit_client_wallet' client_wallet_id=wallet.pk %}">Edit</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("walletTableBody");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+{% endblock %}

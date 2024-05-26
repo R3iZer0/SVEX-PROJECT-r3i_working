@@ -1,0 +1,42 @@
+{% extends 'SVEX_APP/base_manager.html' %}
+{% block title %}Edit Profile{% endblock %}
+
+{% block content %}
+<style>
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  input[type="text"], input[type="email"] {
+    width: calc(100% - 24px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  button[type="submit"] {
+    background-color: #007bff; /* Set background color */
+    color: white; /* Set text color */
+    padding: 10px 20px; /* Add padding to button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Add transition effect */
+  }
+  button[type="submit"]:hover {
+    background-color: #0056b3; /* Darken background color on hover */
+  }
+</style>
+<h1>Edit Profile</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Save Changes</button>
+</form>
+{% endblock %}

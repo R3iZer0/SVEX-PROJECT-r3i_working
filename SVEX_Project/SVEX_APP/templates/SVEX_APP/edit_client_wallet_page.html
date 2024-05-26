@@ -1,0 +1,12 @@
+
+{% extends 'SVEX_APP/base_manager.html' %}
+{% block title %}Edit Client Wallet{% endblock %}
+
+{% block content %}
+    <h1>Edit Client Wallet</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+    </form>
+{% endblock %}

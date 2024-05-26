@@ -1,0 +1,49 @@
+.idea/
+# Virtual environment
+venv/
+__venv__/
+env/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local development settings
+local_settings.py
+
+#STATIC Kyc
+SVEX_APP/static/kyc/
+
+# Database
+db.sqlite3
+
+# Log files
+*.log
+
+# Media files
+media/
+
+# Virtual environment
+venv/
+__venv__/
+env/
+
+# Compiled Python files
+*.pyc
+*.pyo
+
+# Editor-specific files
+.vscode/
+*.swp
+.DS_Store
+
+# Environment variables file
+.env
+
+# Ignore the Django migration history
+#**/migrations/*.py
+#**/migrations/*.pyc
+**/migrations/__pycache__/
+```

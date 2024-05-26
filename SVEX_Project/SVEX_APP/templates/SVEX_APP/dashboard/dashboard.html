@@ -1,0 +1,562 @@
+{% extends 'SVEX_APP/dashboard/layout.html' %}
+{% block returnBack %}
+<div data-v-6d8feed9="" class="back-btn" style="display: none;">
+    <a data-v-6d8feed9=""
+       href="/dashboard"
+       aria-current="page"
+       class="router-link-exact-active router-link-active">
+        <svg data-v-6d8feed9="" width="20" height="20" viewBox="0 0 20 20" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path data-v-6d8feed9="" d="M12 5L7 10L12 15" stroke="#0A0F38"
+                  stroke-width="1.2"></path>
+        </svg>
+        <span data-v-6d8feed9="">Back to Dashboard</span></a>
+</div>
+{% endblock %}
+{% block content %}
+<div data-v-3548214f="" class="">
+    <div data-v-3548214f="" class="page-header" style="display: none;"><h1
+            data-v-3548214f=""></h1></div>
+    <div data-v-4a6dcd5a="" data-v-25d21512="" class="page-container row" data-v-3548214f=""
+         style="border-bottom: none; margin: 0px;">
+        <div data-v-25d21512="" data-v-4a6dcd5a="" class="user-info row col-lg-12"
+             style="margin: 0px;">
+            <div data-v-25d21512="" data-v-4a6dcd5a="" class="total">
+                <div data-v-25d21512="" data-v-4a6dcd5a=""
+                     class="content wrapped-content col-lg-6 col-md-12 col-xs-12"
+                     style="margin-bottom: 15px; display: flex; align-items: center; background: rgb(246, 249, 253); padding: 16px; border-radius: 10px;">
+                    <div data-v-25d21512="" data-v-4a6dcd5a="" class="user-img-div"
+                         style="margin-right: 20px; border: 3px solid white; width: 88px; height: 88px; border-radius: 50%;">
+                        <img data-v-25d21512="" data-v-4a6dcd5a=""
+                             src="/static/images/user-default.png" alt=""
+                             style="filter: grayscale(100%);"></div>
+                    <div data-v-25d21512="" data-v-4a6dcd5a="" style="width: 100%;">
+                        <div data-v-25d21512="" data-v-4a6dcd5a="" class="header"
+                             style="justify-content: space-between;"><!---->
+                            <span data-v-25d21512="" data-v-4a6dcd5a="" title="a329808a-20fe-45bb-b69d-9c3248c3e2d2" style="cursor: pointer;">
+                                <svg data-v-25d21512="" data-v-4a6dcd5a="" width="16" height="16" viewBox="0 0 16 16"
+                                     fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g data-v-25d21512="" data-v-4a6dcd5a="" id="solar:copy-broken">
+                                        <g data-v-25d21512="" data-v-4a6dcd5a="" id="Group">
+                                            <path data-v-25d21512="" data-v-4a6dcd5a="" id="Vector"
+                                                  d="M13.9987 6.66671C13.9907 5.21671 13.9267 4.43137 13.414 3.91937C12.8287 3.33337 11.8853 3.33337 10 3.33337H8C6.11467 3.33337 5.17133 3.33337 4.586 3.91937C4 4.50471 4 5.44804 4 7.33337V10.6667C4 12.552 4 13.4954 4.586 14.0807C5.17133 14.6667 6.11467 14.6667 8 14.6667H10C11.8853 14.6667 12.8287 14.6667 13.414 14.0807C14 13.4954 14 12.552 14 10.6667V10"
+                                                  stroke="#808191" stroke-width="1.5"
+                                                  stroke-linecap="round">
+
+                                            </path>
+                                            <path data-v-25d21512="" data-v-4a6dcd5a="" id="Vector_2"
+                                                  d="M2 6.66671V10.6667C2 11.1971 2.21071 11.7058 2.58579 12.0809C2.96086 12.456 3.46957 12.6667 4 12.6667M12 3.33337C12 2.80294 11.7893 2.29423 11.4142 1.91916C11.0391 1.54409 10.5304 1.33337 10 1.33337H7.33333C4.81933 1.33337 3.562 1.33337 2.78133 2.11471C2.34533 2.55004 2.15267 3.13337 2.068 4.00004"
+                                                  stroke="#808191"
+                                                  stroke-width="1.5"
+                                                  stroke-linecap="round">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                ID: <b data-v-25d21512="" data-v-4a6dcd5a=""
+                                              style="max-width: 100px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">{{user.id}}</b></span>
+                        </div>
+                        <div data-v-25d21512="" data-v-4a6dcd5a="" class="email">
+                            {{user.email}}
+                        </div>
+                        <div data-v-25d21512="" data-v-4a6dcd5a="" class="item" style="display: flex; justify-content: space-between; margin-top: 10px;">
+                            <div data-v-25d21512="" data-v-4a6dcd5a="" class="title" style="color: rgb(128, 129, 145);">KYC Verification</div>
+                            {% if user.kyc.verification_status == 'cancelled' %}
+                                <div data-v-25d21512="" data-v-4a6dcd5a="" class="status red">Cancelled</div>
+                            {% elif user.kyc.verification_status == 'confirmed' %}
+                                <div data-v-25d21512="" data-v-4a6dcd5a="" class="status green">Confirmed</div>
+                            {% elif user.kyc.verification_status == 'pending' %}
+                                <div data-v-25d21512="" data-v-4a6dcd5a="" class="status orange">Pending</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div data-v-25d21512="" data-v-4a6dcd5a=""
+                     class="col-lg-2 col-md-12 col-xs-12" style="padding-top: 10px;">
+                    <div data-v-25d21512="" data-v-4a6dcd5a="" class="info-item"
+                         style="background: rgba(42, 133, 255, 0.1);">
+                        <div data-v-25d21512="" data-v-4a6dcd5a=""
+                             style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                            <div data-v-25d21512="" data-v-4a6dcd5a="" class="title">Account Security</div>
+                            <svg data-v-25d21512="" data-v-4a6dcd5a="" width="24"
+                                 height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path data-v-25d21512="" data-v-4a6dcd5a=""
+                                      d="M12 22C9.68333 21.4167 7.77067 20.0873 6.262 18.012C4.75333 15.9367 3.99933 13.6327 4 11.1V5L12 2L20 5V11.1C20 13.6333 19.2457 15.9377 17.737 18.013C16.2283 20.0883 14.316 21.4173 12 22ZM12 19.9C13.6167 19.4 14.9667 18.4123 16.05 16.937C17.1333 15.4617 17.7667 13.816 17.95 12H12V4.125L6 6.375V11.55C6 11.6667 6.01667 11.8167 6.05 12H12V19.9Z"
+                                      fill="#2A85FF"></path>
+                            </svg>
+                        </div>
+                        <div data-v-25d21512="" data-v-4a6dcd5a="" class="status red"
+                             style="color: rgb(42, 133, 255) !important;"> Low
+                        </div>
+                    </div>
+                </div>
+                <div data-v-25d21512="" data-v-4a6dcd5a=""
+                     class="col-lg-2 col-md-12 col-xs-12" style="padding-top: 10px;">
+                    <div data-v-25d21512="" data-v-4a6dcd5a="" class="info-item"
+                         style="background: rgba(255, 9, 9, 0.1);">
+                        <div data-v-25d21512="" data-v-4a6dcd5a=""
+                             style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                            <div data-v-25d21512="" data-v-4a6dcd5a="" class="title">Fee
+                                Discount
+                            </div>
+                            <svg data-v-25d21512="" data-v-4a6dcd5a="" width="24"
+                                 height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path data-v-25d21512="" data-v-4a6dcd5a=""
+                                      fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M3.94625 13.0746C3.35625 12.4844 3.35625 11.5241 3.94625 10.9249L4.66625 10.2037C5.23625 9.63447 5.54625 8.88422 5.54625 8.08296V7.05263C5.54625 6.22236 6.22625 5.54213 7.05625 5.54213H8.08625C8.88625 5.54213 9.63625 5.23203 10.2063 4.66185L10.9263 3.94161C11.5063 3.36142 12.4563 3.35142 13.0563 3.92261C13.0662 3.9316 13.0663 3.93161 13.0762 3.94158L13.0763 3.94161C13.2063 4.06165 13.3863 4.14168 13.5863 4.14168C13.9963 4.14168 14.3363 3.81157 14.3363 3.39143C14.3363 3.19137 14.2563 3.01131 14.1263 2.87126C14.0863 2.83125 14.0463 2.80124 14.0063 2.77123C12.8263 1.70088 10.9963 1.7509 9.86625 2.88227L9.14625 3.6015C8.86625 3.88259 8.48625 4.04164 8.08625 4.04164H7.05625C5.39625 4.04164 4.04625 5.39208 4.04625 7.05263V8.08296C4.04625 8.48309 3.88625 8.86322 3.60625 9.14331L2.87625 9.87355C1.70625 11.0539 1.70625 12.9656 2.88625 14.1359C3.03625 14.285 3.22625 14.355 3.41625 14.355C3.60625 14.355 3.80625 14.275 3.94625 14.1359C4.23625 13.8348 4.23625 13.3647 3.94625 13.0746ZM20.3948 9.14631L21.1128 9.86454C21.6818 10.4297 21.9968 11.185 21.9998 11.9902C22.0018 12.7955 21.6908 13.5527 21.1238 14.1229L20.3938 14.8532C20.1158 15.1333 19.9558 15.5204 19.9548 15.9175V16.9449C19.9548 18.6054 18.6038 19.9568 16.9438 19.9568C16.5298 19.9568 16.1938 19.6207 16.1938 19.2066C16.1938 18.7925 16.5298 18.4563 16.9438 18.4563C17.7778 18.4563 18.4548 17.7781 18.4548 16.9449V15.9165C18.4558 15.1143 18.7668 14.36 19.3318 13.7938L20.0518 13.0726C20.3448 12.7785 20.5008 12.3984 20.4998 11.9942C20.4988 11.5911 20.3398 11.212 20.0538 10.9269L19.3328 10.2057C18.7668 9.63547 18.4558 8.88222 18.4548 8.08196V7.05263C18.4548 6.21835 17.7778 5.54113 16.9438 5.54113C16.5298 5.54113 16.1938 5.20502 16.1938 4.79089C16.1938 4.37675 16.5298 4.04064 16.9438 4.04064C18.6038 4.04064 19.9548 5.39108 19.9548 7.05263V8.08096C19.9558 8.48209 20.1118 8.86122 20.3948 9.14631ZM11.9993 20.5015C12.4093 20.5175 12.7853 20.3445 13.0713 20.0554C13.3633 19.7633 13.8383 19.7603 14.1323 20.0524C14.4253 20.3455 14.4263 20.8206 14.1343 21.1147C13.5473 21.7049 12.7733 22 11.9993 22C11.2313 22 10.4623 21.7089 9.87625 21.1257L9.14625 20.3955C8.86325 20.1144 8.48425 19.9573 8.08125 19.9563H7.05525C5.39525 19.9563 4.04425 18.6059 4.04425 16.9454C4.04425 16.5312 4.38025 16.1951 4.79425 16.1951C5.20825 16.1951 5.54425 16.5312 5.54425 16.9454C5.54425 17.7786 6.22125 18.4558 7.05525 18.4558H8.08325C8.88425 18.4568 9.63825 18.7689 10.2053 19.3321L10.9263 20.0544C11.2183 20.3455 11.5973 20.5015 11.9993 20.5015ZM8.89945 14.0387C8.60645 14.3318 8.60645 14.807 8.89945 15.1C9.04545 15.2461 9.23745 15.3191 9.42945 15.3191C9.62145 15.3191 9.81345 15.2461 9.96045 15.1L15.0995 9.95837C15.3925 9.66528 15.3925 9.19012 15.0995 8.89703C14.8065 8.60393 14.3325 8.60393 14.0395 8.89703L8.89945 14.0387ZM9.42055 8.57522C9.89955 8.57522 10.2886 8.96435 10.2886 9.44351C10.2886 9.92266 9.89955 10.3108 9.42055 10.3108C8.94155 10.3108 8.55255 9.92266 8.55255 9.44351C8.55255 8.96435 8.94155 8.57522 9.42055 8.57522ZM14.5696 13.7038C15.0486 13.7038 15.4376 14.0929 15.4376 14.5721C15.4376 15.0512 15.0486 15.4404 14.5696 15.4404C14.0896 15.4404 13.7016 15.0512 13.7016 14.5721C13.7016 14.0929 14.0896 13.7038 14.5696 13.7038Z"
+                                      fill="#FF0909"></path>
+                            </svg>
+                        </div>
+                        <div data-v-25d21512="" data-v-4a6dcd5a="" class="status"
+                             style="color: rgb(255, 9, 9);">0%
+                        </div>
+                    </div>
+                </div>
+                <div data-v-25d21512="" data-v-4a6dcd5a=""
+                     class="col-lg-2 col-md-12 col-xs-12" style="padding-top: 10px;">
+                    <div data-v-25d21512="" data-v-4a6dcd5a="" class="info-item"
+                         style="background: rgba(247, 147, 26, 0.1);">
+                        <div data-v-25d21512="" data-v-4a6dcd5a=""
+                             style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                            <div data-v-25d21512="" data-v-4a6dcd5a="" class="title">
+                                Status
+                            </div>
+                            <svg data-v-25d21512="" data-v-4a6dcd5a="" width="24"
+                                 height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path data-v-25d21512="" data-v-4a6dcd5a=""
+                                      d="M17.4978 21.9194C17.3748 21.9224 17.2528 21.8914 17.1458 21.8294L12.0077 19.1234L7.48375 21.5594C6.74575 21.9594 5.82175 21.6854 5.42175 20.9464C5.41675 20.9374 5.41175 20.9284 5.40675 20.9184C5.24975 20.6094 5.19475 20.2604 5.24875 19.9184L6.12875 14.7244L2.45075 11.0004C1.84975 10.3804 1.84975 9.39441 2.45075 8.77341C2.68475 8.52741 2.99475 8.36841 3.33075 8.32241L8.37375 7.55641L10.6167 2.88341C10.9657 2.12341 11.8647 1.78941 12.6257 2.13841C12.9557 2.28941 13.2198 2.55441 13.3708 2.88341L15.6237 7.57241L20.6838 8.34741C21.0928 8.40841 21.4598 8.63441 21.6998 8.97141C22.1478 9.61541 22.0798 10.4854 21.5378 11.0524L17.8767 14.7324L18.3867 17.5314C18.4577 17.9514 18.1807 18.3524 17.7618 18.4314C17.3498 18.5054 16.9558 18.2314 16.8818 17.8184L16.3628 15.0194C16.2758 14.5064 16.4387 13.9824 16.8027 13.6114L20.4727 9.90541L15.4128 9.12041C14.8997 9.03741 14.4648 8.69741 14.2598 8.22041L12.0077 3.55141L9.72775 8.29441C9.52275 8.77241 9.08775 9.11141 8.57475 9.19441L3.53175 9.96041L7.17475 13.6604C7.53775 14.0254 7.70075 14.5424 7.61475 15.0494L6.73475 20.2434L11.2577 17.8174C11.7057 17.5654 12.2528 17.5654 12.7008 17.8174L17.8317 20.5234C18.1448 20.6944 18.3037 21.0554 18.2188 21.4024C18.1408 21.7494 17.8347 21.9964 17.4797 22.0024L17.4978 21.9194Z"
+                                      fill="#F7931A"></path>
+                            </svg>
+                        </div>
+                        <div data-v-25d21512="" data-v-4a6dcd5a="" class="status"
+                             style="color: white;">Beginner
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-v-25d21512="" data-v-4a6dcd5a=""
+             style="display: none; width: 100%; padding: 0px 15px;">
+            <div data-v-25d21512="" data-v-4a6dcd5a="" class="alert alert-danger"
+                 style="margin: auto auto 10px; max-width: 1100px;"> Your email address has
+                not been verified! To be able to restore access to your account, as well as
+                receive information regarding your account, confirm your mail.<br
+                        data-v-25d21512="" data-v-4a6dcd5a="">
+                <div data-v-25d21512="" data-v-4a6dcd5a=""
+                     style="text-decoration: underline; cursor: pointer;"> Click here, to
+                    send confirmation mail
+                </div>
+            </div>
+        </div>
+        <div data-v-25d21512="" data-v-4a6dcd5a="" class="col-lg-6 col-md-12 col-xs-12">
+            <div data-v-25d21512="" data-v-4a6dcd5a="" class="section"
+                 style="margin-bottom: 20px;">
+                <div data-v-25d21512="" data-v-4a6dcd5a="" class="head"><h3
+                        data-v-25d21512="" data-v-4a6dcd5a="" class="title">Account Security</h3>
+                    <div data-v-25d21512="" data-v-4a6dcd5a="" class="new-btn-route">
+                        <a data-v-25d21512="" href="/dashboard/settings" class="" data-v-4a6dcd5a=""> Settings </a>
+                    </div>
+                </div>
+                <div data-v-25d21512="" data-v-4a6dcd5a="">
+                    <a data-v-25d21512="" href="/dashboard/settings" class="item col-lg-3 col-md-6 col-xs-6" data-v-4a6dcd5a="">
+                    <div data-v-25d21512="" class="content" style="position: relative;">
+                        <div data-v-25d21512=""
+                             style="width: 42px; height: 42px; position: relative; left: -15px;">
+                            <svg width="78" height="62" viewBox="0 0 78 62" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_f_30_6234)">
+                                    <ellipse cx="19" cy="10" rx="19" ry="10"
+                                             transform="matrix(-1 0 0 1 58 22)"
+                                             fill="url(#paint0_linear_30_6234)"></ellipse>
+                                </g>
+                                <circle cx="39" cy="21" r="21" transform="rotate(180 39 21)"
+                                        fill="url(#paint1_linear_30_6234)"></circle>
+                                <path d="M38.4998 22.802C37.2319 22.802 36.1978 21.7679 36.1978 20.5C36.1978 19.232 37.2319 18.1979 38.4998 18.1979C39.7678 18.1979 40.8019 19.232 40.8019 20.5C40.8019 21.7679 39.7678 22.802 38.4998 22.802ZM38.4998 19.2604C37.8198 19.2604 37.2603 19.82 37.2603 20.5C37.2603 21.18 37.8198 21.7395 38.4998 21.7395C39.1798 21.7395 39.7394 21.18 39.7394 20.5C39.7394 19.82 39.1798 19.2604 38.4998 19.2604Z"
+                                      fill="white"></path>
+                                <path d="M43.104 22.802C42.8136 22.802 42.5728 22.5612 42.5728 22.2708V18.7291C42.5728 18.4387 42.8136 18.1979 43.104 18.1979C43.3944 18.1979 43.6353 18.4387 43.6353 18.7291V22.2708C43.6353 22.5612 43.3944 22.802 43.104 22.802Z"
+                                      fill="white"></path>
+                                <path d="M33.5418 28.1145C31.686 28.1145 30.1772 26.6058 30.1772 24.75C30.1772 22.8941 31.686 21.3854 33.5418 21.3854C35.3977 21.3854 36.9064 22.8941 36.9064 24.75C36.9064 26.6058 35.3977 28.1145 33.5418 28.1145ZM33.5418 22.4479C32.2739 22.4479 31.2397 23.482 31.2397 24.75C31.2397 26.0179 32.2739 27.052 33.5418 27.052C34.8097 27.052 35.8439 26.0179 35.8439 24.75C35.8439 23.482 34.8097 22.4479 33.5418 22.4479Z"
+                                      fill="white"></path>
+                                <path d="M32.8331 25.9896C32.656 25.9896 32.4789 25.8975 32.3798 25.7346C32.231 25.4867 32.3089 25.1538 32.5639 25.005L33.1023 24.6792C33.1518 24.6509 33.1873 24.5871 33.1873 24.5304V23.8717C33.1873 23.5813 33.4281 23.3405 33.7185 23.3405C34.0089 23.3405 34.2498 23.5813 34.2498 23.8717V24.5304C34.2498 24.9625 34.016 25.3734 33.6477 25.5929L33.1094 25.9188C33.0244 25.9684 32.9252 25.9896 32.8331 25.9896Z"
+                                      fill="white"></path>
+                                <path d="M42.0415 26.698H36.0207C35.7303 26.698 35.4894 26.4571 35.4894 26.1667C35.4894 25.8763 35.7303 25.6355 36.0207 25.6355H42.0415C44.0673 25.6355 45.0519 24.6509 45.0519 22.625V18.375C45.0519 16.3492 44.0673 15.3646 42.0415 15.3646H34.9582C32.9323 15.3646 31.9478 16.3492 31.9478 18.375V22.7667C31.9478 23.0571 31.7069 23.298 31.4165 23.298C31.1261 23.298 30.8853 23.0571 30.8853 22.7667V18.375C30.8853 15.7896 32.3728 14.3021 34.9582 14.3021H42.0415C44.6269 14.3021 46.1144 15.7896 46.1144 18.375V22.625C46.1144 25.2105 44.6269 26.698 42.0415 26.698Z"
+                                      fill="white"></path>
+                                <defs>
+                                    <filter id="filter0_f_30_6234" x="0" y="2" width="78"
+                                            height="60" filterUnits="userSpaceOnUse"
+                                            color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0"
+                                                 result="BackgroundImageFix"></feFlood>
+                                        <feBlend mode="normal" in="SourceGraphic"
+                                                 in2="BackgroundImageFix"
+                                                 result="shape"></feBlend>
+                                        <feGaussianBlur stdDeviation="10"
+                                                        result="effect1_foregroundBlur_30_6234"></feGaussianBlur>
+                                    </filter>
+                                    <linearGradient id="paint0_linear_30_6234" x1="19"
+                                                    y1="0" x2="19" y2="20"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#E98F22"></stop>
+                                        <stop offset="1" stop-color="#F6DA53"></stop>
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_30_6234" x1="39"
+                                                    y1="0" x2="39" y2="42"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#F48B0B"></stop>
+                                        <stop offset="1" stop-color="#F8D73D"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div data-v-25d21512="">
+                            <span data-v-25d21512="" class="title">Login History</span>
+                            <span data-v-25d21512="" class="description"> Last login: {{user.last_login}} </span>
+                        </div>
+                    </div>
+                </a><a data-v-25d21512="" href="/dashboard/settings"
+                       class="item col-lg-3 col-md-6 col-xs-6" data-v-4a6dcd5a="">
+                    <div data-v-25d21512="" class="content" style="position: relative;">
+                        <div data-v-25d21512=""
+                             style="width: 42px; height: 42px; position: relative; left: -15px;">
+                            <svg width="76" height="62" viewBox="0 0 76 62" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_f_30_6242)">
+                                    <ellipse cx="18" cy="8.5" rx="18" ry="8.5"
+                                             transform="matrix(1 0 0 -1 20 42)"
+                                             fill="url(#paint0_linear_30_6242)"></ellipse>
+                                    <ellipse cx="18" cy="8.5" rx="18" ry="8.5"
+                                             transform="matrix(1 0 0 -1 20 42)"
+                                             fill="url(#paint1_linear_30_6242)"></ellipse>
+                                </g>
+                                <circle cx="38" cy="21" r="21"
+                                        fill="url(#paint2_linear_30_6242)"></circle>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M35.4297 14.4165H41.5702C43.9708 14.4165 45.5837 16.1009 45.5837 18.607V24.3927C45.5837 26.8988 43.9701 28.5832 41.5695 28.5832H37.7587C37.4655 28.5832 37.2275 28.3452 37.2275 28.0519C37.2275 27.7587 37.4655 27.5207 37.7587 27.5207H41.5695C43.3623 27.5207 44.5212 26.2931 44.5212 24.3927V18.607C44.5212 16.7065 43.3623 15.479 41.5702 15.479H35.4297C33.6376 15.479 32.4795 16.7065 32.4795 18.607V24.3927C32.4795 26.2931 33.6376 27.5207 35.4297 27.5207C35.723 27.5207 35.961 27.7587 35.961 28.0519C35.961 28.3452 35.723 28.5832 35.4297 28.5832C33.0292 28.5832 31.417 26.8988 31.417 24.3927V18.607C31.417 16.1009 33.0292 14.4165 35.4297 14.4165ZM34.5811 20.7438C34.7015 20.476 35.0146 20.3563 35.2838 20.4774C35.5515 20.5971 35.6705 20.9116 35.5501 21.1794C35.5048 21.2807 35.4821 21.3883 35.4821 21.4996C35.4821 21.9302 35.832 22.2801 36.262 22.2801C36.6927 22.2801 37.0426 21.9302 37.0426 21.4996C37.0426 21.0696 36.6927 20.7197 36.262 20.7197C35.9687 20.7197 35.7307 20.4817 35.7307 20.1884C35.7307 19.8952 35.9687 19.6572 36.262 19.6572C37.0929 19.6572 37.7877 20.2125 38.0172 20.9683H42.0491C42.3423 20.9683 42.5803 21.2063 42.5803 21.4996V22.8114C42.5803 23.1046 42.3423 23.3426 42.0491 23.3426C41.7558 23.3426 41.5178 23.1046 41.5178 22.8114V22.0308H40.5765V22.8114C40.5765 23.1046 40.3385 23.3426 40.0452 23.3426C39.752 23.3426 39.514 23.1046 39.514 22.8114V22.0308H38.0172C37.7877 22.7873 37.0929 23.3426 36.262 23.3426C35.2462 23.3426 34.4196 22.516 34.4196 21.4996C34.4196 21.2368 34.4735 20.9832 34.5811 20.7438Z"
+                                      fill="#FDFEFF"></path>
+                                <defs>
+                                    <filter id="filter0_f_30_6242" x="0" y="5" width="76"
+                                            height="57" filterUnits="userSpaceOnUse"
+                                            color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0"
+                                                 result="BackgroundImageFix"></feFlood>
+                                        <feBlend mode="normal" in="SourceGraphic"
+                                                 in2="BackgroundImageFix"
+                                                 result="shape"></feBlend>
+                                        <feGaussianBlur stdDeviation="10"
+                                                        result="effect1_foregroundBlur_30_6242"></feGaussianBlur>
+                                    </filter>
+                                    <linearGradient id="paint0_linear_30_6242" x1="18"
+                                                    y1="0" x2="18" y2="17"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#B3A3F8"></stop>
+                                        <stop offset="1" stop-color="#7B14B2"></stop>
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_30_6242" x1="18"
+                                                    y1="0" x2="18" y2="17"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#B3A3F8"></stop>
+                                        <stop offset="1" stop-color="#A415F0"></stop>
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear_30_6242" x1="38"
+                                                    y1="0" x2="38" y2="42"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#B3A3F8"></stop>
+                                        <stop offset="1" stop-color="#A415F0"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div data-v-25d21512=""><span data-v-25d21512="" class="title">Password</span><span
+                                data-v-25d21512="" class="description"> Updated {{user.UserCredentials.new_password}} </span>
+                        </div>
+                    </div>
+                </a>
+                    <a data-v-25d21512="" href="/dashboard/settings"
+                       class="item col-lg-3 col-md-6 col-xs-6" data-v-4a6dcd5a="">
+                    <div data-v-25d21512="" class="content" style="position: relative;">
+                        <div data-v-25d21512=""
+                             style="width: 42px; height: 42px; position: relative; left: -15px;">
+                            <svg width="76" height="62" viewBox="0 0 76 62" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g filter="url(#filter0_f_30_6258)">
+                                    <ellipse cx="38" cy="35" rx="18" ry="7"
+                                             fill="url(#paint0_linear_30_6258)"></ellipse>
+                                    <ellipse cx="38" cy="35" rx="18" ry="7"
+                                             fill="url(#paint1_linear_30_6258)"></ellipse>
+                                </g>
+                                <circle cx="38" cy="21" r="21"
+                                        fill="url(#paint2_linear_30_6258)"></circle>
+                                <path d="M32.318 15.833C31.6779 15.833 31.1594 16.3405 31.1594 16.9669V26.033C31.1594 26.6595 31.6779 27.1669 32.318 27.1669H44.6821C45.3221 27.1669 45.8406 26.6595 45.8406 26.033V16.9669C45.8406 16.3405 45.3221 15.833 44.6821 15.833H32.318ZM44.6821 14.7C45.9622 14.7 47 15.7149 47 16.9669V26.033C47 27.2851 45.9622 28.3 44.6821 28.3H32.318C31.0379 28.3 30 27.2851 30 26.033V16.9669C30 15.7149 31.0379 14.7 32.318 14.7H44.6821ZM36.9419 24.163H33.4C33.3247 24.1621 33.2499 24.1761 33.18 24.2041C33.1101 24.2321 33.0464 24.2736 32.9926 24.3263C32.9388 24.3789 32.8958 24.4417 32.8663 24.511C32.8367 24.5802 32.8211 24.6546 32.8203 24.73C32.8203 25.0428 33.0796 25.2969 33.4 25.2969H36.9419C37.0172 25.2977 37.0918 25.2836 37.1616 25.2556C37.2315 25.2275 37.2951 25.186 37.3488 25.1333C37.4026 25.0807 37.4454 25.018 37.4749 24.9487C37.5044 24.8795 37.52 24.8052 37.5208 24.73C37.52 24.6547 37.5044 24.5804 37.4749 24.5112C37.4454 24.4419 37.4026 24.3792 37.3488 24.3266C37.2951 24.2739 37.2315 24.2324 37.1616 24.2043C37.0918 24.1763 37.0172 24.1622 36.9419 24.163ZM41.6875 17.533C40.3921 17.533 39.3372 18.5454 39.3372 19.8C39.3372 20.457 39.6263 21.0478 40.0887 21.4617C39.2132 21.9785 38.6292 22.9093 38.6292 23.9726C38.6292 24.2761 38.6768 24.5744 38.7695 24.8592C38.8672 25.1567 39.1936 25.3216 39.4979 25.2264C39.5697 25.2048 39.6365 25.1692 39.6944 25.1216C39.7523 25.074 39.8002 25.0153 39.8351 24.949C39.8701 24.8827 39.8915 24.8101 39.8981 24.7354C39.9047 24.6607 39.8964 24.5855 39.8736 24.5141C39.8168 24.3392 39.7881 24.1564 39.7886 23.9726C39.7886 22.9739 40.6361 22.1596 41.6875 22.1596C42.739 22.1596 43.5872 22.9739 43.5872 23.9726C43.5872 24.1197 43.5694 24.2633 43.5337 24.4027C43.5158 24.4756 43.5125 24.5512 43.5241 24.6254C43.5357 24.6995 43.5619 24.7706 43.6012 24.8345C43.6405 24.8984 43.6922 24.9538 43.7531 24.9976C43.814 25.0414 43.883 25.0726 43.9562 25.0895C44.104 25.1266 44.2605 25.1041 44.3918 25.0268C44.5232 24.9495 44.6189 24.8236 44.6583 24.6764C44.7169 24.4469 44.7458 24.2115 44.7458 23.9726C44.7458 22.9093 44.1618 21.9785 43.2864 21.46C43.7487 21.0478 44.0378 20.457 44.0378 19.8C44.0378 18.5454 42.9838 17.533 41.6875 17.533ZM36.9419 21.188H33.4C33.3247 21.1871 33.2499 21.2011 33.18 21.2291C33.1101 21.2571 33.0464 21.2986 32.9926 21.3513C32.9388 21.4039 32.8958 21.4667 32.8663 21.536C32.8367 21.6052 32.8211 21.6796 32.8203 21.755C32.8203 22.0678 33.0796 22.3219 33.4 22.3219H36.9419C37.0172 22.3227 37.0918 22.3086 37.1616 22.2806C37.2315 22.2525 37.2951 22.211 37.3488 22.1583C37.4026 22.1057 37.4454 22.043 37.4749 21.9737C37.5044 21.9045 37.52 21.8302 37.5208 21.755C37.52 21.6797 37.5044 21.6054 37.4749 21.5362C37.4454 21.4669 37.4026 21.4042 37.3488 21.3516C37.2951 21.2989 37.2315 21.2574 37.1616 21.2293C37.0918 21.2013 37.0172 21.1872 36.9419 21.188ZM41.6875 18.6669C42.3479 18.6669 42.8792 19.1769 42.8792 19.8C42.8792 20.4239 42.3479 20.933 41.6875 20.933C41.0271 20.933 40.4958 20.423 40.4958 19.8C40.4958 19.1761 41.0271 18.6669 41.6875 18.6669ZM36.9419 18.213H33.4C33.3247 18.2121 33.2499 18.2261 33.18 18.2541C33.1101 18.2821 33.0464 18.3236 32.9926 18.3763C32.9388 18.4289 32.8958 18.4917 32.8663 18.561C32.8367 18.6302 32.8211 18.7046 32.8203 18.78C32.8203 19.0928 33.0796 19.3469 33.4 19.3469H36.9419C37.0172 19.3477 37.0918 19.3336 37.1616 19.3056C37.2315 19.2775 37.2951 19.236 37.3488 19.1833C37.4026 19.1307 37.4454 19.068 37.4749 18.9987C37.5044 18.9295 37.52 18.8552 37.5208 18.78C37.52 18.7047 37.5044 18.6304 37.4749 18.5612C37.4454 18.4919 37.4026 18.4292 37.3488 18.3766C37.2951 18.3239 37.2315 18.2824 37.1616 18.2543C37.0918 18.2263 37.0172 18.2122 36.9419 18.213Z"
+                                      fill="#FDFEFF"></path>
+                                <defs>
+                                    <filter id="filter0_f_30_6258" x="0" y="8" width="76"
+                                            height="54" filterUnits="userSpaceOnUse"
+                                            color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0"
+                                                 result="BackgroundImageFix"></feFlood>
+                                        <feBlend mode="normal" in="SourceGraphic"
+                                                 in2="BackgroundImageFix"
+                                                 result="shape"></feBlend>
+                                        <feGaussianBlur stdDeviation="10"
+                                                        result="effect1_foregroundBlur_30_6258"></feGaussianBlur>
+                                    </filter>
+                                    <linearGradient id="paint0_linear_30_6258" x1="38"
+                                                    y1="28" x2="38" y2="42"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#30DD80"></stop>
+                                        <stop offset="1" stop-color="#139E8D"></stop>
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_30_6258" x1="38"
+                                                    y1="28" x2="38" y2="42"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#32F28B"></stop>
+                                        <stop offset="1" stop-color="#0DD1B9"></stop>
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear_30_6258" x1="38"
+                                                    y1="0" x2="38" y2="42"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#32F28B"></stop>
+                                        <stop offset="1" stop-color="#0DD1B9"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div data-v-25d21512="">
+                            <span data-v-25d21512="" class="title">Verification</span>
+                            {% if user.kyc.is_verified %}
+                            <span data-v-25d21512="" class="description green"> Verified </span>
+                            {% else %}
+                            <span data-v-25d21512="" class="description red"> Unverified </span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </a></div>
+            </div>
+        </div>
+        <div data-v-25d21512="" data-v-4a6dcd5a="" class="col-lg-6 col-md-12 col-xs-12">
+            <div data-v-25d21512="" data-v-4a6dcd5a="" class="section"
+                 style="border: none; padding: 0px !important; margin-bottom: 10px;">
+                <div data-v-25d21512="" data-v-4a6dcd5a="" class="head"><h3
+                        data-v-25d21512="" data-v-4a6dcd5a="" class="title"
+                        style="font-size: 16px;">Total Balance</h3>
+                    <div data-v-25d21512="" data-v-4a6dcd5a="" class="new-btn-empty"><a
+                            data-v-25d21512="" href="/en/dashboard/wallets" class=""
+                            data-v-4a6dcd5a=""> Manage </a></div>
+                </div>
+                <div data-v-25d21512="" data-v-4a6dcd5a="" class="wrapper"
+                     style="display: flex; align-items: end;">
+                    <div data-v-25d21512="" data-v-4a6dcd5a=""
+                         style="display: flex; align-items: center;"><img data-v-25d21512=""
+                                                                          data-v-4a6dcd5a=""
+                                                                          width="24px"
+                                                                          src="/static/images/currencies/BTC.png"
+                                                                          alt=""
+                                                                          style="margin-right: 15px;">
+                        <div data-v-25d21512="" data-v-4a6dcd5a=""><span data-v-25d21512=""
+                                                                         data-v-4a6dcd5a=""
+                                                                         class="value">0.00000000 <b
+                                data-v-25d21512="" data-v-4a6dcd5a=""
+                                style="font-size: 14px; color: rgba(10, 15, 56, 0.7);">BTC</b></span><span
+                                data-v-25d21512="" data-v-4a6dcd5a="" class="title"
+                                style="color: rgb(128, 129, 145); font-weight: 400; display: block; margin: 0px; font-size: 12px;">~$0.00</span>
+                        </div>
+                    </div>
+                    <div data-v-25d21512="" data-v-4a6dcd5a=""></div>
+                </div>
+            </div>
+        </div>
+        <div data-v-25d21512="" data-v-4a6dcd5a="" class=" col-lg-6 col-md-12 col-xs-12">
+            <div data-v-25d21512="" data-v-4a6dcd5a="" class="section"
+                 style="border: none; padding: 0px !important; margin-bottom: 20px;">
+                <div data-v-25d21512="" data-v-4a6dcd5a="" class="head"><h3
+                        data-v-25d21512="" data-v-4a6dcd5a="" class="title"
+                        style="font-size: 16px;">Withdraw Limit</h3>
+                    <div data-v-25d21512="" data-v-4a6dcd5a="" class="new-btn-empty"><a
+                            data-v-25d21512="" href="/en/dashboard/settings/verification"
+                            class="" data-v-4a6dcd5a=""> Increase limit </a></div>
+                </div>
+                <div data-v-25d21512="" data-v-4a6dcd5a="" class="wrapper"
+                     style="display: flex; align-items: end;">
+                    <div data-v-25d21512="" data-v-4a6dcd5a=""
+                         style="display: flex; align-items: center;"><img data-v-25d21512=""
+                                                                          data-v-4a6dcd5a=""
+                                                                          width="24px"
+                                                                          src="/static/images/currencies/BTC.png"
+                                                                          alt=""
+                                                                          style="margin-right: 15px;"><span
+                            data-v-25d21512="" data-v-4a6dcd5a="" class="value"> 1.00000000 <b
+                            data-v-25d21512="" data-v-4a6dcd5a=""
+                            style="font-size: 14px; color: rgba(10, 15, 56, 0.7);">BTC</b></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-v-25d21512="" data-v-4a6dcd5a="" class="col-lg-12 col-md-12 col-xs-12"
+             style="margin-bottom: 20px;">
+            <div data-v-25d21512="" data-v-4a6dcd5a="" class="section">
+                <div data-v-25d21512="" data-v-4a6dcd5a="" class="head"><h3
+                        data-v-25d21512="" data-v-4a6dcd5a="" class="title">Trading
+                    Fees</h3>
+                    <div data-v-25d21512="" data-v-4a6dcd5a="" class="new-btn-route"><a
+                            data-v-25d21512="" href="/en/fees" class="" data-v-4a6dcd5a="">
+                        Fee Schedule </a></div>
+                </div>
+                <div data-v-25d21512="" data-v-4a6dcd5a="" class="trading">
+                    <div data-v-25d21512="" data-v-4a6dcd5a="" class="stats">
+                        <div data-v-25d21512="" data-v-4a6dcd5a="" class="wrapper"
+                             style="margin: 10px; display: block;"><h4 data-v-25d21512=""
+                                                                       data-v-4a6dcd5a=""
+                                                                       style="margin: 0px;">
+                            Lv.1</h4><span data-v-25d21512="" data-v-4a6dcd5a="">Trading level</span>
+                        </div>
+                        <div data-v-25d21512="" data-v-4a6dcd5a="" class="wrapper"
+                             style="margin: 10px; display: block;"><h4 data-v-25d21512=""
+                                                                       data-v-4a6dcd5a=""
+                                                                       style="margin: 0px;">
+                            0.075%</h4><span data-v-25d21512=""
+                                             data-v-4a6dcd5a="">Maker</span></div>
+                        <div data-v-25d21512="" data-v-4a6dcd5a="" class="wrapper"
+                             style="margin: 10px; display: block;"><h4 data-v-25d21512=""
+                                                                       data-v-4a6dcd5a=""
+                                                                       style="margin: 0px;">
+                            0.075%</h4><span data-v-25d21512=""
+                                             data-v-4a6dcd5a="">Taker</span></div>
+                    </div>
+                    <div data-v-25d21512="" data-v-4a6dcd5a="" class="wrapper"
+                         style="display: block;">
+                        <div data-v-25d21512="" data-v-4a6dcd5a=""><span data-v-25d21512=""
+                                                                         data-v-4a6dcd5a=""
+                                                                         class="title">Trade Volume</span><br
+                                data-v-25d21512="" data-v-4a6dcd5a=""><span
+                                data-v-25d21512=""
+                                data-v-4a6dcd5a="">Evaluates At 00:00 AM (UTC) Every Day </span>
+                        </div>
+                        <div data-v-25d21512="" data-v-4a6dcd5a=""
+                             style="display: flex; justify-content: space-between; margin-top: 12px;">
+                                                        <span data-v-25d21512="" data-v-4a6dcd5a="" class="current-btc">0.00000000 <b
+                                                                data-v-25d21512="" data-v-4a6dcd5a=""
+                                                                style="color: rgba(10, 15, 56, 0.7);">BTC</b> (0.00 %)</span><span
+                                data-v-25d21512="" data-v-4a6dcd5a=""
+                                class="goal-btc">300 <b data-v-25d21512=""
+                                                        data-v-4a6dcd5a=""
+                                                        style="color: rgba(10, 15, 56, 0.7);">BTC</b></span>
+                        </div>
+                        <div data-v-25d21512="" data-v-4a6dcd5a="" class="progress"
+                             style="margin-top: 12px;">
+                            <div data-v-25d21512="" data-v-4a6dcd5a="" role="progressbar"
+                                 aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                                 class="progress-bar" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--        <div data-v-25d21512="" data-v-4a6dcd5a="" class="col-lg-7 col-md-12 col-xs-12"-->
+<!--             style="margin-bottom: 20px;">-->
+<!--            <div data-v-25d21512="" data-v-4a6dcd5a="" class="section">-->
+<!--                <div data-v-25d21512="" data-v-4a6dcd5a="" class="head"><h3-->
+<!--                        data-v-25d21512="" data-v-4a6dcd5a="" class="title">Referral-->
+<!--                    system</h3>-->
+<!--                    <div data-v-25d21512="" data-v-4a6dcd5a="" class="new-btn-route"><a-->
+<!--                            data-v-25d21512="" href="/en/dashboard/referral" class=""-->
+<!--                            data-v-4a6dcd5a=""> Referral center </a></div>-->
+<!--                </div>-->
+<!--                <div data-v-25d21512="" data-v-4a6dcd5a="" class="stats"-->
+<!--                     style="margin: 0px;">-->
+<!--                    <div data-v-25d21512="" data-v-4a6dcd5a="" class="wrapper"-->
+<!--                         style="margin: 10px; display: block;"><h4 data-v-25d21512=""-->
+<!--                                                                   data-v-4a6dcd5a=""-->
+<!--                                                                   style="margin: 0px;">0-->
+<!--                        BTC</h4><span data-v-25d21512="" data-v-4a6dcd5a="">Earned</span>-->
+<!--                    </div>-->
+<!--                    <div data-v-25d21512="" data-v-4a6dcd5a="" class="wrapper"-->
+<!--                         style="margin: 10px; display: block;"><h4 data-v-25d21512=""-->
+<!--                                                                   data-v-4a6dcd5a=""-->
+<!--                                                                   style="margin: 0px;">-->
+<!--                        0</h4><span data-v-25d21512=""-->
+<!--                                    data-v-4a6dcd5a="">Friends invited</span></div>-->
+<!--                    <div data-v-25d21512="" data-v-4a6dcd5a="" class="wrapper"-->
+<!--                         style="margin: 10px; display: block;"><h4 data-v-25d21512=""-->
+<!--                                                                   data-v-4a6dcd5a=""-->
+<!--                                                                   style="margin: 0px;">-->
+<!--                        0</h4><span data-v-25d21512="" data-v-4a6dcd5a="">Bonus</span></div>-->
+<!--                </div>-->
+<!--                <div data-v-25d21512="" data-v-4a6dcd5a="" class="wrapper"-->
+<!--                     style="display: flex; align-items: center;">-->
+<!--                    <svg data-v-25d21512="" data-v-4a6dcd5a="" width="24" height="25"-->
+<!--                         viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"-->
+<!--                         style="margin-right: 10px;">-->
+<!--                        <rect data-v-25d21512="" data-v-4a6dcd5a="" x="0.5" y="1" width="23"-->
+<!--                              height="23" rx="3.5"-->
+<!--                              stroke="url(#paint0_linear_30_6338)"></rect>-->
+<!--                        <path data-v-25d21512="" data-v-4a6dcd5a="" fill-rule="evenodd"-->
+<!--                              clip-rule="evenodd"-->
+<!--                              d="M9.25 8C9.11739 8 8.99021 8.05268 8.89645 8.14645C8.80268 8.24021 8.75 8.36739 8.75 8.5V8.75H7.5V13.5H13V8.75H11.75V8.5C11.75 8.36739 11.6973 8.24021 11.6036 8.14645C11.5098 8.05268 11.3826 8 11.25 8H9.25ZM11.25 11C11.3826 11 11.5098 10.9473 11.6036 10.8536C11.6973 10.7598 11.75 10.6326 11.75 10.5V10.25H12.5V13H11.25V11.5H9.25V13H8V10.25H8.75V10.5C8.75 10.6326 8.80268 10.7598 8.89645 10.8536C8.99021 10.9473 9.11739 11 9.25 11H11.25ZM8 9.25H8.75V9.75H8V9.25ZM12.5 9.75H11.75V9.25H12.5V9.75ZM10.75 12V13H9.75V12H10.75ZM10 8.5V9.25H9.25V9.75H10V10.5H10.5V9.75H11.25V9.25H10.5V8.5H10Z"-->
+<!--                              fill="#808191"></path>-->
+<!--                        <path data-v-25d21512="" data-v-4a6dcd5a=""-->
+<!--                              d="M13.5 13.25C13.5 12.9848 13.6053 12.7304 13.7929 12.5429C13.9804 12.3554 14.2348 12.25 14.5 12.25C14.7652 12.25 15.0196 12.3554 15.2071 12.5429C15.3946 12.7304 15.5 12.9848 15.5 13.25C15.5 13.5152 15.3946 13.7696 15.2071 13.9571C15.0196 14.1446 14.7652 14.25 14.5 14.25C14.2348 14.25 13.9804 14.1446 13.7929 13.9571C13.6053 13.7696 13.5 13.5152 13.5 13.25ZM14.5 14.75C13.8325 14.75 12.5 15.1155 12.5 15.841V16.5H10.25C10.0677 16.5 9.94949 16.4342 9.87424 16.3495C9.79499 16.2602 9.74999 16.1342 9.74999 16V15.1035L10.5732 15.9268L10.9267 15.5732L9.49999 14.1465L8.07324 15.5732L8.42674 15.9268L9.24999 15.1035V16C9.24999 16.2408 9.32999 16.4898 9.50074 16.6818C9.67549 16.8783 9.93224 17 10.25 17H16.5V15.841C16.5 15.1155 15.1675 14.75 14.5 14.75Z"-->
+<!--                              fill="#808191"></path>-->
+<!--                        <defs data-v-25d21512="" data-v-4a6dcd5a="">-->
+<!--                            <linearGradient data-v-25d21512="" data-v-4a6dcd5a=""-->
+<!--                                            id="paint0_linear_30_6338" x1="12" y1="0.5"-->
+<!--                                            x2="12" y2="24.5"-->
+<!--                                            gradientUnits="userSpaceOnUse">-->
+<!--                                <stop data-v-25d21512="" data-v-4a6dcd5a=""-->
+<!--                                      stop-color="#FF1E4E"></stop>-->
+<!--                                <stop data-v-25d21512="" data-v-4a6dcd5a="" offset="1"-->
+<!--                                      stop-color="#FF839D"></stop>-->
+<!--                            </linearGradient>-->
+<!--                        </defs>-->
+<!--                    </svg>-->
+<!--                    <div data-v-25d21512="" data-v-4a6dcd5a=""><span data-v-25d21512=""-->
+<!--                                                                     data-v-4a6dcd5a=""-->
+<!--                                                                     class="title"-->
+<!--                                                                     style="font-size: 12px; color: rgb(128, 129, 145);">Referral code</span><span-->
+<!--                            data-v-25d21512="" data-v-4a6dcd5a="" class="value"-->
+<!--                            style="font-size: 14px;">r4k1yj</span></div>-->
+<!--                </div>-->
+<!--                <div data-v-25d21512="" data-v-4a6dcd5a="" class="wrapper"-->
+<!--                     style="margin-bottom: 20px; display: flex; align-items: center;">-->
+<!--                    <svg data-v-25d21512="" data-v-4a6dcd5a="" width="24" height="25"-->
+<!--                         viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"-->
+<!--                         style="margin-right: 10px;">-->
+<!--                        <rect data-v-25d21512="" data-v-4a6dcd5a="" x="0.5" y="1" width="23"-->
+<!--                              height="23" rx="3.5"-->
+<!--                              stroke="url(#paint0_linear_30_6347)"></rect>-->
+<!--                        <path data-v-25d21512="" data-v-4a6dcd5a="" fill-rule="evenodd"-->
+<!--                              clip-rule="evenodd"-->
+<!--                              d="M9.25 8C9.11739 8 8.99021 8.05268 8.89645 8.14645C8.80268 8.24021 8.75 8.36739 8.75 8.5V8.75H7.5V13.5H13V8.75H11.75V8.5C11.75 8.36739 11.6973 8.24021 11.6036 8.14645C11.5098 8.05268 11.3826 8 11.25 8H9.25ZM11.25 11C11.3826 11 11.5098 10.9473 11.6036 10.8536C11.6973 10.7598 11.75 10.6326 11.75 10.5V10.25H12.5V13H11.25V11.5H9.25V13H8V10.25H8.75V10.5C8.75 10.6326 8.80268 10.7598 8.89645 10.8536C8.99021 10.9473 9.11739 11 9.25 11H11.25ZM8 9.25H8.75V9.75H8V9.25ZM12.5 9.75H11.75V9.25H12.5V9.75ZM10.75 12V13H9.75V12H10.75ZM10 8.5V9.25H9.25V9.75H10V10.5H10.5V9.75H11.25V9.25H10.5V8.5H10Z"-->
+<!--                              fill="#808191"></path>-->
+<!--                        <path data-v-25d21512="" data-v-4a6dcd5a=""-->
+<!--                              d="M13.5 13.25C13.5 12.9848 13.6053 12.7304 13.7929 12.5429C13.9804 12.3554 14.2348 12.25 14.5 12.25C14.7652 12.25 15.0196 12.3554 15.2071 12.5429C15.3946 12.7304 15.5 12.9848 15.5 13.25C15.5 13.5152 15.3946 13.7696 15.2071 13.9571C15.0196 14.1446 14.7652 14.25 14.5 14.25C14.2348 14.25 13.9804 14.1446 13.7929 13.9571C13.6053 13.7696 13.5 13.5152 13.5 13.25ZM14.5 14.75C13.8325 14.75 12.5 15.1155 12.5 15.841V16.5H10.25C10.0677 16.5 9.94949 16.4342 9.87424 16.3495C9.79499 16.2602 9.74999 16.1342 9.74999 16V15.1035L10.5732 15.9268L10.9267 15.5732L9.49999 14.1465L8.07324 15.5732L8.42674 15.9268L9.24999 15.1035V16C9.24999 16.2408 9.32999 16.4898 9.50074 16.6818C9.67549 16.8783 9.93224 17 10.25 17H16.5V15.841C16.5 15.1155 15.1675 14.75 14.5 14.75Z"-->
+<!--                              fill="#808191"></path>-->
+<!--                        <defs data-v-25d21512="" data-v-4a6dcd5a="">-->
+<!--                            <linearGradient data-v-25d21512="" data-v-4a6dcd5a=""-->
+<!--                                            id="paint0_linear_30_6347" x1="12" y1="0.5"-->
+<!--                                            x2="12" y2="24.5"-->
+<!--                                            gradientUnits="userSpaceOnUse">-->
+<!--                                <stop data-v-25d21512="" data-v-4a6dcd5a=""-->
+<!--                                      stop-color="#B3A3F8"></stop>-->
+<!--                                <stop data-v-25d21512="" data-v-4a6dcd5a="" offset="1"-->
+<!--                                      stop-color="#A415F0"></stop>-->
+<!--                            </linearGradient>-->
+<!--                        </defs>-->
+<!--                    </svg>-->
+<!--                    <div data-v-25d21512="" data-v-4a6dcd5a=""><span data-v-25d21512=""-->
+<!--                                                                     data-v-4a6dcd5a=""-->
+<!--                                                                     class="title"-->
+<!--                                                                     style="font-size: 12px; color: rgb(128, 129, 145);">Referral link</span><span-->
+<!--                            data-v-25d21512="" data-v-4a6dcd5a="" class="value"-->
+<!--                            style="font-size: 14px;">svex.org/invite/r4k1yj</span></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}
+

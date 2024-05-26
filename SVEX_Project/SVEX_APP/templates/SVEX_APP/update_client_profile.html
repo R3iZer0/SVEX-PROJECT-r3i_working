@@ -1,0 +1,34 @@
+<!-- update_client_profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <h1>Edit Profile</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="id_first_name">First Name:</label>
+        {{ form.first_name }}
+        <br>
+        <label for="id_last_name">Last Name:</label>
+        {{ form.last_name }}
+        <br>
+        <label for="id_birthdate">Birthdate:</label>
+        {{ form.birthdate }}
+    
+        <br>
+        <label for="id_phone">Phone:</label>
+        {{ form.phone }}
+        <br>
+        <label for="id_address">Address:</label>
+        {{ form.address }}
+        <br>
+        <label for="id_zip_code">Zip Code:</label>
+        {{ form.zip_code }}
+        <br>
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>

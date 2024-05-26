@@ -1,0 +1,361 @@
+{% extends 'SVEX_APP/dashboard/layout.html' %}
+{% block content %}
+
+                            <div data-v-3548214f="" class="">
+                                <div data-v-3548214f="" class="page-header"><h1 data-v-3548214f="">Orders</h1></div>
+                                <div data-v-4a6dcd5a="" data-v-a974b6e8="" class="page-container" data-v-3548214f=""
+                                     style="border-bottom: none;">
+                                    <div data-v-a974b6e8="" data-v-4a6dcd5a="" class="container-fluid"
+                                         style="margin-bottom: 40px;">
+                                        <div data-v-a974b6e8="" data-v-4a6dcd5a=""
+                                             style="padding-bottom: 9px; margin: 20px 0px;"><span data-v-a974b6e8=""
+                                                                                                  data-v-4a6dcd5a=""
+                                                                                                  class="tabs active">Open Orders</span><span
+                                                data-v-a974b6e8="" data-v-4a6dcd5a="" class="tabs">History Orders</span>
+                                        </div>
+                                        <div data-v-a974b6e8="" data-v-4a6dcd5a="" class="container-fluid">
+                                            <div data-v-62f45cc0="" data-v-a974b6e8="" class="" data-v-4a6dcd5a="">
+                                                <div data-v-62f45cc0="" style="position: relative;">
+                                                    <div data-v-62f45cc0="" style="margin-bottom: 15px;">
+                                                        <div data-v-62f45cc0="" class="toggle_filters"
+                                                             style="display: none;"><span data-v-62f45cc0=""
+                                                                                          style="margin-right: 5px;">Clear sort</span>
+                                                            <svg data-v-62f45cc0="" aria-hidden="true" focusable="false"
+                                                                 data-prefix="fal" data-icon="times" role="img"
+                                                                 xmlns="http://www.w3.org/2000/svg"
+                                                                 viewBox="0 0 320 512"
+                                                                 class="svg-inline--fa fa-times fa-w-10 fa-sm">
+                                                                <path data-v-62f45cc0="" fill="currentColor"
+                                                                      d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                                                                      class=""></path>
+                                                            </svg>
+                                                        </div>
+                                                        <div data-v-62f45cc0=""
+                                                             style="position: relative; display: flex; align-items: center; justify-content: space-between;">
+                                                            <div data-v-62f45cc0=""><select data-v-62f45cc0=""
+                                                                                            class="mr-auto"
+                                                                                            style="width: auto !important; border-radius: 50px; padding: 3px 6px; font-size: 12px; outline: none; border: 1px solid rgb(240, 240, 240);">
+                                                                <option data-v-62f45cc0="" value="10">10</option>
+                                                                <option data-v-62f45cc0="" value="25">25</option>
+                                                                <option data-v-62f45cc0="" value="50">50</option>
+                                                            </select></div>
+                                                            <div data-v-62f45cc0="" style="position: relative;">
+                                                                <div data-v-62f45cc0="" class="search-input"><input
+                                                                        data-v-62f45cc0="" type="text"
+                                                                        placeholder="Search by coin, market...">
+                                                                    <div data-v-62f45cc0="" class="placeholder">
+                                                                        <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                             focusable="false" data-prefix="fal"
+                                                                             data-icon="search" role="img"
+                                                                             xmlns="http://www.w3.org/2000/svg"
+                                                                             viewBox="0 0 512 512"
+                                                                             class="svg-inline--fa fa-search fa-w-16">
+                                                                            <path data-v-62f45cc0="" fill="currentColor"
+                                                                                  d="M508.5 481.6l-129-129c-2.3-2.3-5.3-3.5-8.5-3.5h-10.3C395 312 416 262.5 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c54.5 0 104-21 141.1-55.2V371c0 3.2 1.3 6.2 3.5 8.5l129 129c4.7 4.7 12.3 4.7 17 0l9.9-9.9c4.7-4.7 4.7-12.3 0-17zM208 384c-97.3 0-176-78.7-176-176S110.7 32 208 32s176 78.7 176 176-78.7 176-176 176z"
+                                                                                  class=""></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                         focusable="false" data-prefix="fal"
+                                                                         data-icon="times" role="img"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 320 512"
+                                                                         class="clear_search svg-inline--fa fa-times fa-w-10"
+                                                                         style="display: none;">
+                                                                        <path data-v-62f45cc0="" fill="currentColor"
+                                                                              d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                                                                              class=""></path>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-v-62f45cc0="">
+                                                    <div data-v-62f45cc0="" class="table_div empty"
+                                                         style="overflow-x: auto;">
+                                                        <div data-v-62f45cc0="" class="empty"
+                                                             style="height: 117.5px; display: none;">Data loading...
+                                                        </div>
+                                                        <div data-v-62f45cc0="" class="empty"
+                                                             style="height: 117.5px; display: none;">Data loading error.
+                                                            Page reload is required.
+                                                        </div>
+                                                        <div data-v-62f45cc0="" class="empty" style="height: 117.5px;">
+                                                            No data
+                                                        </div>
+                                                        <table data-v-62f45cc0="" class="table" style="display: none;">
+                                                            <thead data-v-62f45cc0="">
+                                                            <tr data-v-62f45cc0="">
+                                                                <th data-v-62f45cc0="" class="animated">Side
+                                                                    <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                         focusable="false" data-prefix="fas"
+                                                                         data-icon="sort-up" role="img"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 320 512"
+                                                                         class="arrow svg-inline--fa fa-sort-up fa-w-10 up"
+                                                                         style="display: none;">
+                                                                        <path data-v-62f45cc0="" fill="currentColor"
+                                                                              d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                                              class=""></path>
+                                                                    </svg>
+                                                                </th>
+                                                                <th data-v-62f45cc0="" class="">Pair
+                                                                    <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                         focusable="false" data-prefix="fas"
+                                                                         data-icon="sort-up" role="img"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 320 512"
+                                                                         class="arrow svg-inline--fa fa-sort-up fa-w-10 up"
+                                                                         style="display: none;">
+                                                                        <path data-v-62f45cc0="" fill="currentColor"
+                                                                              d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                                              class=""></path>
+                                                                    </svg>
+                                                                </th>
+                                                                <th data-v-62f45cc0="" class="animated">Price
+                                                                    <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                         focusable="false" data-prefix="fas"
+                                                                         data-icon="sort-up" role="img"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 320 512"
+                                                                         class="arrow svg-inline--fa fa-sort-up fa-w-10 up"
+                                                                         style="display: none;">
+                                                                        <path data-v-62f45cc0="" fill="currentColor"
+                                                                              d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                                              class=""></path>
+                                                                    </svg>
+                                                                </th>
+                                                                <th data-v-62f45cc0="" class="animated">Amount
+                                                                    <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                         focusable="false" data-prefix="fas"
+                                                                         data-icon="sort-up" role="img"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 320 512"
+                                                                         class="arrow svg-inline--fa fa-sort-up fa-w-10 up"
+                                                                         style="display: none;">
+                                                                        <path data-v-62f45cc0="" fill="currentColor"
+                                                                              d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                                              class=""></path>
+                                                                    </svg>
+                                                                </th>
+                                                                <th data-v-62f45cc0="" class="animated">Date
+                                                                    <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                         focusable="false" data-prefix="fas"
+                                                                         data-icon="sort-up" role="img"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 320 512"
+                                                                         class="arrow svg-inline--fa fa-sort-up fa-w-10 up"
+                                                                         style="display: none;">
+                                                                        <path data-v-62f45cc0="" fill="currentColor"
+                                                                              d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                                              class=""></path>
+                                                                    </svg>
+                                                                </th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody data-v-62f45cc0=""></tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div data-v-62f45cc0=""
+                                                         style="margin-top: 10px; display: none; justify-content: space-between; align-items: center;">
+                                                        <span data-v-62f45cc0=""
+                                                              style="color: rgb(117, 125, 145); font-size: 11.3833px;">Showing 1 to 0 of 0 entries</span>
+                                                        <ul data-v-62f45cc0="" class="pagination justify-content-end">
+                                                            <button data-v-62f45cc0="" class="page-item disabled"> ❮
+                                                            </button>
+                                                            <button data-v-62f45cc0="" class="page-item"> ❯</button>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div data-v-a974b6e8="" data-v-4a6dcd5a="" class="container-fluid"
+                                             style="display: none;">
+                                            <div data-v-62f45cc0="" data-v-a974b6e8="" class="" data-v-4a6dcd5a="">
+                                                <div data-v-62f45cc0="" style="position: relative;">
+                                                    <div data-v-62f45cc0="" style="margin-bottom: 15px;">
+                                                        <div data-v-62f45cc0="" class="toggle_filters"
+                                                             style="display: none;"><span data-v-62f45cc0=""
+                                                                                          style="margin-right: 5px;">Clear sort</span>
+                                                            <svg data-v-62f45cc0="" aria-hidden="true" focusable="false"
+                                                                 data-prefix="fal" data-icon="times" role="img"
+                                                                 xmlns="http://www.w3.org/2000/svg"
+                                                                 viewBox="0 0 320 512"
+                                                                 class="svg-inline--fa fa-times fa-w-10 fa-sm">
+                                                                <path data-v-62f45cc0="" fill="currentColor"
+                                                                      d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                                                                      class=""></path>
+                                                            </svg>
+                                                        </div>
+                                                        <div data-v-62f45cc0=""
+                                                             style="position: relative; display: flex; align-items: center; justify-content: space-between;">
+                                                            <div data-v-62f45cc0=""><select data-v-62f45cc0=""
+                                                                                            class="mr-auto"
+                                                                                            style="width: auto !important; border-radius: 50px; padding: 3px 6px; font-size: 12px; outline: none; border: 1px solid rgb(240, 240, 240);">
+                                                                <option data-v-62f45cc0="" value="10">10</option>
+                                                                <option data-v-62f45cc0="" value="25">25</option>
+                                                                <option data-v-62f45cc0="" value="50">50</option>
+                                                            </select></div>
+                                                            <div data-v-62f45cc0="" style="position: relative;">
+                                                                <div data-v-62f45cc0="" class="search-input"><input
+                                                                        data-v-62f45cc0="" type="text"
+                                                                        placeholder="Search by coin, market...">
+                                                                    <div data-v-62f45cc0="" class="placeholder">
+                                                                        <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                             focusable="false" data-prefix="fal"
+                                                                             data-icon="search" role="img"
+                                                                             xmlns="http://www.w3.org/2000/svg"
+                                                                             viewBox="0 0 512 512"
+                                                                             class="svg-inline--fa fa-search fa-w-16">
+                                                                            <path data-v-62f45cc0="" fill="currentColor"
+                                                                                  d="M508.5 481.6l-129-129c-2.3-2.3-5.3-3.5-8.5-3.5h-10.3C395 312 416 262.5 416 208 416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c54.5 0 104-21 141.1-55.2V371c0 3.2 1.3 6.2 3.5 8.5l129 129c4.7 4.7 12.3 4.7 17 0l9.9-9.9c4.7-4.7 4.7-12.3 0-17zM208 384c-97.3 0-176-78.7-176-176S110.7 32 208 32s176 78.7 176 176-78.7 176-176 176z"
+                                                                                  class=""></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                         focusable="false" data-prefix="fal"
+                                                                         data-icon="times" role="img"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 320 512"
+                                                                         class="clear_search svg-inline--fa fa-times fa-w-10"
+                                                                         style="display: none;">
+                                                                        <path data-v-62f45cc0="" fill="currentColor"
+                                                                              d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"
+                                                                              class=""></path>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-v-62f45cc0="">
+                                                    <div data-v-62f45cc0="" class="table_div empty"
+                                                         style="overflow-x: auto;">
+                                                        <div data-v-62f45cc0="" class="empty"
+                                                             style="height: 117.5px; display: none;">Data loading...
+                                                        </div>
+                                                        <div data-v-62f45cc0="" class="empty"
+                                                             style="height: 117.5px; display: none;">Data loading error.
+                                                            Page reload is required.
+                                                        </div>
+                                                        <div data-v-62f45cc0="" class="empty" style="height: 117.5px;">
+                                                            No data
+                                                        </div>
+                                                        <table data-v-62f45cc0="" class="table" style="display: none;">
+                                                            <thead data-v-62f45cc0="">
+                                                            <tr data-v-62f45cc0="">
+                                                                <th data-v-62f45cc0="" class="animated">Side
+                                                                    <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                         focusable="false" data-prefix="fas"
+                                                                         data-icon="sort-up" role="img"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 320 512"
+                                                                         class="arrow svg-inline--fa fa-sort-up fa-w-10 up"
+                                                                         style="display: none;">
+                                                                        <path data-v-62f45cc0="" fill="currentColor"
+                                                                              d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                                              class=""></path>
+                                                                    </svg>
+                                                                </th>
+                                                                <th data-v-62f45cc0="" class="">Pair
+                                                                    <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                         focusable="false" data-prefix="fas"
+                                                                         data-icon="sort-up" role="img"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 320 512"
+                                                                         class="arrow svg-inline--fa fa-sort-up fa-w-10 up"
+                                                                         style="display: none;">
+                                                                        <path data-v-62f45cc0="" fill="currentColor"
+                                                                              d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                                              class=""></path>
+                                                                    </svg>
+                                                                </th>
+                                                                <th data-v-62f45cc0="" class="animated">AVG
+                                                                    <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                         focusable="false" data-prefix="fas"
+                                                                         data-icon="sort-up" role="img"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 320 512"
+                                                                         class="arrow svg-inline--fa fa-sort-up fa-w-10 up"
+                                                                         style="display: none;">
+                                                                        <path data-v-62f45cc0="" fill="currentColor"
+                                                                              d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                                              class=""></path>
+                                                                    </svg>
+                                                                </th>
+                                                                <th data-v-62f45cc0="" class="animated">Price
+                                                                    <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                         focusable="false" data-prefix="fas"
+                                                                         data-icon="sort-up" role="img"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 320 512"
+                                                                         class="arrow svg-inline--fa fa-sort-up fa-w-10 up"
+                                                                         style="display: none;">
+                                                                        <path data-v-62f45cc0="" fill="currentColor"
+                                                                              d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                                              class=""></path>
+                                                                    </svg>
+                                                                </th>
+                                                                <th data-v-62f45cc0="" class="animated">Amount
+                                                                    <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                         focusable="false" data-prefix="fas"
+                                                                         data-icon="sort-up" role="img"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 320 512"
+                                                                         class="arrow svg-inline--fa fa-sort-up fa-w-10 up"
+                                                                         style="display: none;">
+                                                                        <path data-v-62f45cc0="" fill="currentColor"
+                                                                              d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                                              class=""></path>
+                                                                    </svg>
+                                                                </th>
+                                                                <th data-v-62f45cc0="" class="animated">Status
+                                                                    <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                         focusable="false" data-prefix="fas"
+                                                                         data-icon="sort-up" role="img"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 320 512"
+                                                                         class="arrow svg-inline--fa fa-sort-up fa-w-10 up"
+                                                                         style="display: none;">
+                                                                        <path data-v-62f45cc0="" fill="currentColor"
+                                                                              d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                                              class=""></path>
+                                                                    </svg>
+                                                                </th>
+                                                                <th data-v-62f45cc0="" class="animated">Inactive Date
+                                                                    <svg data-v-62f45cc0="" aria-hidden="true"
+                                                                         focusable="false" data-prefix="fas"
+                                                                         data-icon="sort-up" role="img"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 320 512"
+                                                                         class="arrow svg-inline--fa fa-sort-up fa-w-10 up">
+                                                                        <path data-v-62f45cc0="" fill="currentColor"
+                                                                              d="M279 224H41c-21.4 0-32.1-25.9-17-41L143 64c9.4-9.4 24.6-9.4 33.9 0l119 119c15.2 15.1 4.5 41-16.9 41z"
+                                                                              class=""></path>
+                                                                    </svg>
+                                                                </th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody data-v-62f45cc0=""></tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div data-v-62f45cc0=""
+                                                         style="margin-top: 10px; display: none; justify-content: space-between; align-items: center;">
+                                                        <span data-v-62f45cc0=""
+                                                              style="color: rgb(117, 125, 145); font-size: 11.3833px;">Showing 1 to 0 of 0 entries</span>
+                                                        <ul data-v-62f45cc0="" class="pagination justify-content-end">
+                                                            <button data-v-62f45cc0="" class="page-item disabled"> ❮
+                                                            </button>
+                                                            <button data-v-62f45cc0="" class="page-item"> ❯</button>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+{% endblock %}

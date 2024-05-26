@@ -1,0 +1,103 @@
+{% extends 'SVEX_APP/base_manager.html' %}
+{% block title %} Register {% endblock %}
+
+{% block content %}
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .card {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        max-width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .error-msg {
+        color: red;
+        margin-top: 10px;
+    }
+
+    .success-msg {
+        color: green;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="container">
+    <div class="card">
+        <h2>User Registration</h2>
+        {% if msg %}
+            <p class="error-msg">{{ msg }}</p>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_username">Username</label>
+                {{ form.username }}
+            </div>
+            <div class="form-group">
+                <label for="id_email">Email</label>
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                <label for="id_password1">Password</label>
+                {{ form.password1 }}
+            </div>
+            <div class="form-group">
+                <label for="id_password2">Confirm Password</label>
+                {{ form.password2 }}
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="id_client" name="is_client" checked>
+                <label for="id_client">Is Client</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="id_manager" name="is_manager" >
+                <label for="id_manager">Is Manager</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        {% if success_msg %}
+            <p class="success-msg">{{ success_msg }}</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

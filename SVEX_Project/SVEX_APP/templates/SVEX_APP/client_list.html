@@ -1,0 +1,118 @@
+{% extends 'SVEX_APP/base_manager.html' %}
+{% block title %}View Clients{% endblock %}
+
+{% block content %}
+    <!-- client_list.html -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Client List</title>
+        <style>
+            /* Table styles */
+            table {
+                border-collapse: collapse;
+                width: 80%;
+                margin: auto; /* Center the table */
+            }
+
+            th, td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+
+              /* Search input styles */
+            #searchInput {
+                width: 20%;
+                padding: 10px;
+                margin: 20px 200px;
+                display: block;
+                border: 1px solid #ccc;
+                border-radius: 20px;
+                outline: none;
+                transition: border-color 0.3s;
+            }
+
+            #searchInput:focus {
+                border-color: #007bff;
+            }
+
+            /* Table row hover effect */
+            tbody tr:hover {
+                background-color: #f2f2f2;
+            }
+
+            /* Edit link styles */
+            .edit-link {
+                color: blue;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            /* Edit link hover effect */
+            .edit-link:hover {
+                color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Client List</h1>
+        <input type="text" id="searchInput" placeholder="Search...">
+        <table>
+            <thead>
+                <tr>
+                    <th>Client Number</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Birthdate</th>
+                    <th>Client Credits</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Zip Code</th>
+                    <th>Action</th> <!-- Edit action -->
+                </tr>
+            </thead>
+            <tbody id="clientTableBody">
+                {% for client in clients %}
+                <tr>
+                    <td>{{ client.client_number }}</td>
+                    <td>{{ client.first_name }}</td>
+                    <td>{{ client.last_name }}</td>
+                    <td>{{ client.birthdate }}</td>
+                    <td>{{ client.client_credits }}</td>
+                    <td>{{ client.phone }}</td>
+                    <td>{{ client.address }}</td>
+                    <td>{{ client.zip_code }}</td>
+                    <td><a class="edit-link" href="{% url 'edit_client' client.pk %}">Edit</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <script>
+            document.getElementById("searchInput").addEventListener("input", function() {
+                var searchValue = this.value.toLowerCase();
+                var rows = document.getElementById("clientTableBody").getElementsByTagName("tr");
+                for (var i = 0; i < rows.length; i++) {
+                    var cells = rows[i].getElementsByTagName("td");
+                    var found = false;
+                    for (var j = 0; j < cells.length; j++) {
+                        var cellText = cells[j].textContent.toLowerCase();
+                        if (cellText.indexOf(searchValue) > -1) {
+                            found = true;
+                            break;
+                        }
+                    }
+                    rows[i].style.display = found ? "" : "none";
+                }
+            });
+        </script>
+    </body>
+    </html>
+
+{% endblock %}

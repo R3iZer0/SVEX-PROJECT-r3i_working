@@ -1,0 +1,55 @@
+{% extends 'SVEX_APP/base_manager.html' %}
+
+{% block title %}Edit Website{% endblock %}
+
+{% block content %}
+    <style>
+        /* CSS styles for the form */
+        form {
+            margin: 20px auto; /* Center the form */
+            max-width: 600px; /* Adjust the maximum width as needed */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        /* CSS styles for form elements */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* CSS styles for labels */
+        label {
+            font-weight: bold; /* Make labels bold */
+            font-size: 16px; /* Adjust font size as needed */
+            margin-bottom: 5px; /* Add some space below each label */
+        }
+    </style>
+
+    <h1>Edit Website Details</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+{% endblock %}
